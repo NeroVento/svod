@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "title": "Новоушино и все-все-все",
+    "subtitle": "Оставь одежду всяк сюда входящий",
+    "currentYear": 50
+  },
+  "countries": {
+    "jp": {
+      "name": "Япония",
+      "flag": "🇯🇵",
+      "color": "#d4726a"
+    },
+    "pt": {
+      "name": "Португалия",
+      "flag": "🇵🇹",
+      "color": "#5fc9a8"
+    },
+    "kr": {
+      "name": "Корея",
+      "flag": "🇰🇷",
+      "color": "#7fb8d8"
+    },
+    "es": {
+      "name": "Испания",
+      "flag": "🇪🇸",
+      "color": "#e0a458"
+    },
+    "it": {
+      "name": "Италия",
+      "flag": "🇮🇹",
+      "color": "#a98ce0"
+    },
+    "fr": {
+      "name": "Франция",
+      "flag": "🇫🇷",
+      "color": "#6aa8e0"
+    },
+    "gr": {
+      "name": "Греция",
+      "flag": "🇬🇷",
+      "color": "#8fa3b8"
+    }
+  },
+  "factions": {},
+  "locationTypes": {
+    "city": "Город",
+    "village": "Поселок",
+    "nature": "Природное место",
+    "other": "Другое"
+  },
+  "families": [
+    {
+      "id": "iwaizumi",
+      "name": "Ивайзуми",
+      "color": "#40E0D0"
+    },
+    {
+      "id": "oikawa",
+      "name": "Ойкавы",
+      "color": "#FFFAFA"
+    },
+    {
+      "id": "ushijima",
+      "name": "Ушиджимы",
+      "color": "#8B008B"
+    },
+    {
+      "id": "matsukawa",
+      "name": "Мацукавы",
+      "color": "#008080"
+    },
+    {
+      "id": "hanamaki",
+      "name": "Ханамаки",
+      "color": "#7FFFD4"
+    },
+    {
+      "id": "sawamura",
+      "name": "Савамуры",
+      "color": "#FF7F50"
+    },
+    {
+      "id": "camelot",
+      "name": "Камелоты",
+      "color": "#8B0000"
+    },
+    {
+      "id": "kanda",
+      "name": "Канды",
+      "color": "#00008B"
+    }
+  ],
+  "characters": [
+    {
+      "id": "cmux9di9n7qha",
+      "name": "Ивайзуми Хаджимэ",
+      "alias": "Ивуся",
+      "faction": "iwaizumi",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Физиотерапевт",
+      "status": "жив",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 0,
+        "Отвага": 10,
+        "Ненависть к Ушам": 10
+      },
+      "secret": "Путает левых детей из Новоушина с внуками.",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmuxba6cvck1l",
+      "name": "Ивайзуми Тоору",
+      "alias": "Ойкава",
+      "faction": "iwaizumi",
+      "bornInto": "oikawa",
+      "countries": [
+        "jp"
+      ],
+      "role": "Вирусолог, волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 8,
+        "Отвага": 8,
+        "Красота": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmuxcuaxsl2dp",
+      "name": "Ивайзуми Аоки",
+      "alias": "",
+      "faction": "iwaizumi",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Травматолог",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 8,
+        "Хитрость": 3,
+        "Отвага": 10,
+        "Милосердие": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 19,
+      "died": null
+    },
+    {
+      "id": "cmuyls26p9sy5",
+      "name": "Камелот Токаэдэ",
+      "alias": "То",
+      "faction": "camelot",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Переводчик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 7,
+        "Отвага": 7,
+        "Милосердие": 7
+      },
+      "secret": "",
+      "photo": "",
+      "born": 23,
+      "died": null
+    },
+    {
+      "id": "cmuymve45bjgp",
+      "name": "Камелот Тикки",
+      "alias": "Тикк-сан",
+      "faction": "camelot",
+      "bornInto": "camelot",
+      "countries": [
+        "pt"
+      ],
+      "role": "Граф",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Мягкосердечность": 7,
+        "Умелый любовник": 10,
+        "Страстный любовник": 10,
+        "Курение": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 7,
+      "died": null
+    }
+  ],
+  "events": [],
+  "relations": [
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuxba6cvck1l",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuxcuaxsl2dp",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuxcuaxsl2dp",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuxcuaxsl2dp",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmuyls26p9sy5",
+      "t": "супруг",
+      "label": "Муж"
+    }
+  ],
+  "locations": [
+    {
+      "id": "locmuylq7fu",
+      "name": "Новоушино",
+      "type": "village",
+      "country": "jp",
+      "parent": null,
+      "image": "",
+      "tagline": "",
+      "description": "",
+      "tags": [],
+      "residents": [
+        "cmuxcuaxsl2dp",
+        "cmuxba6cvck1l",
+        "cmux9di9n7qha"
+      ],
+      "secret": ""
+    }
+  ]
+}
