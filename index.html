@@ -79,6 +79,14 @@
     border-bottom:1px solid rgba(224,164,88,.25);
     display:flex; gap:14px; align-items:center; flex-wrap:wrap;
   }
+  .banner.wide{
+  flex-direction:column; align-items:stretch; gap:0;
+  padding:18px 28px;
+}
+.banner.wide code{
+  background:rgba(255,255,255,.06); padding:1px 6px;
+  border-radius:4px; font-size:12px;
+}
   .banner[hidden]{display:none}
   .banner button{
     background:transparent; border:1px solid #6b5433; color:#e5c79a;
@@ -1331,16 +1339,21 @@ let activeLocCountry = 'Все';
    ============================================================ */
 async function boot(){
   let base = null;
+  let rawText = null;
 
   try {
     const r = await fetch('./data.json', { cache: 'no-store' });
-    if (r.ok) base = await r.json();
-      if (base && base.meta && base.meta.currentYear != null){
-    window.__fileCurrentYear = base.meta.currentYear;
-  }
-  } catch(e){ console.error('boot: fetch/parse error', e); }
-
-  if (!base){
+    if (!r.ok){
+      showBanner(
+        `Файл <b>data.json</b> не найден. Проверь, что он лежит рядом с <code>index.html</code>.`,
+        []
+      );
+      $('#srcInfo').className = 'src fail';
+      $('#srcInfo').innerHTML = 'источник: <b>не найден</b>';
+      return;
+    }
+    rawText = await r.text();
+  } catch(e){
     showBanner(
       'Не удалось прочитать data.json. Скорее всего, страница открыта как файл (file://). ' +
       'Запусти локальный сервер: <code>python -m http.server</code> — и открой http://localhost:8000',
@@ -1351,8 +1364,19 @@ async function boot(){
     return;
   }
 
+  try {
+    base = JSON.parse(rawText);
+  } catch(err){
+    showJsonError(err, rawText);
+    return;
+  }
+
   const savedYear = localStorage.getItem(DRAFT_KEY + '_year');
   if (savedYear) viewYear = +savedYear;
+
+  if (base && base.meta && base.meta.currentYear != null){
+    window.__fileCurrentYear = base.meta.currentYear;
+  }
 
   const draftRaw = localStorage.getItem(DRAFT_KEY);
   if (draftRaw){
@@ -1455,6 +1479,80 @@ function showBanner(html, buttons){
     buttons.map((x,i) => `<button data-i="${i}">${esc(x.label)}</button>`).join('');
   b.hidden = false;
   buttons.forEach((x,i) => b.querySelector(`[data-i="${i}"]`).onclick = () => { x.fn(); });
+}
+
+/* ============================================================
+   Понятная ошибка, если data.json сломан
+   ============================================================ */
+function showJsonError(err, rawText){
+  const msg = String(err && err.message || err);
+
+  /* вытаскиваем позицию и номер строки из сообщения */
+  const posMatch = msg.match(/position\s+(\d+)/i);
+  const lineColMatch = msg.match(/line\s+(\d+)\s+column\s+(\d+)/i);
+
+  let position = posMatch ? +posMatch[1] : null;
+  let line = lineColMatch ? +lineColMatch[1] : null;
+  let column = lineColMatch ? +lineColMatch[2] : null;
+
+  /* если есть позиция, но нет номера строки — считаем вручную */
+  if (position != null && line == null && rawText){
+    let l = 1, c = 1;
+    for (let i = 0; i < position && i < rawText.length; i++){
+      if (rawText[i] === '\n'){ l++; c = 1; } else c++;
+    }
+    line = l;
+    column = c;
+  }
+
+  /* контекст — несколько строк вокруг ошибки */
+  let contextHTML = '';
+  if (line != null && rawText){
+    const lines = rawText.split('\n');
+    const from = Math.max(0, line - 3);
+    const to = Math.min(lines.length - 1, line + 2);
+    const esc4 = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    contextHTML = `<div style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;line-height:1.6;background:#0b0f15;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:14px;overflow-x:auto;white-space:pre">`;
+    for (let i = from; i <= to; i++){
+      const isErr = i === line - 1;
+      const num = String(i + 1).padStart(4, ' ');
+      const text = esc4(lines[i] || '');
+      contextHTML += `<div style="color:${isErr ? '#e2574c' : '#8593a6'};${isErr ? 'background:rgba(226,87,76,.08);border-radius:3px' : ''}">`
+        + `<span style="color:${isErr ? '#e2574c' : '#4a5869'}">${num} │ </span>${text}</div>`;
+    }
+    contextHTML += `</div>`;
+  }
+
+  const hints = [
+    'Запятые: <b>между</b> элементами — есть, <b>после последнего</b> — нет',
+    'Кавычки только прямые двойные <code>"</code>, не «ёлочки» и не одинарные',
+    'Числа (<code>born</code>, <code>died</code>, <code>year</code>) — без кавычек',
+    'Открой файл в VS Code, нажми <code>Ctrl + Shift + P</code> → введи <code>Format Document</code> → Enter. Редактор покажет точное место ошибки'
+  ];
+
+  const location = line != null
+    ? `Строка <b>${line}</b>${column ? `, колонка <b>${column}</b>` : ''}`
+    : 'Точное место не определено';
+
+  const b = $('#banner');
+  b.classList.add('wide');
+  b.innerHTML = `
+    <div style="font-size:14px;margin-bottom:6px">
+      <b style="color:var(--danger)">⚠ Ошибка в data.json</b> — ${location}
+    </div>
+    <div style="color:var(--dim);font-size:12.5px;margin-bottom:4px">
+      ${esc(msg)}
+    </div>
+    ${contextHTML}
+    <div style="margin-top:14px;font-size:12.5px;line-height:1.8">
+      <b>Что проверить:</b><br>
+      ${hints.map(h => '• ' + h).join('<br>')}
+    </div>
+  `;
+  b.hidden = false;
+
+  $('#srcInfo').className = 'src fail';
+  $('#srcInfo').innerHTML = 'источник: <b>ошибка в data.json</b>';
 }
 
 /* ============================================================
