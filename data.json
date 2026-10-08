@@ -35,6 +35,21 @@
       "flag": "🇫🇷",
       "color": "#6aa8e0"
     },
+    "us": {
+      "name": "США",
+      "flag": "US",
+      "color": "#FFFFFF"
+    },
+    "in": {
+      "name": "Индия",
+      "flag": "IN",
+      "color": "#D2691E"
+    },
+    "cn": {
+      "name": "Китай",
+      "flag": "CN",
+      "color": "#FF0000"
+    },
     "gr": {
       "name": "Греция",
       "flag": "🇬🇷",
@@ -85,10 +100,31 @@
       "color": "#8B0000"
     },
     {
+      "id": "salo",
+      "name": "Сало",
+      "color": "#8B4513"
+    },
+    {
       "id": "kanda",
       "name": "Канды",
       "color": "#00008B"
+    },
+    {
+      "id": "jinguji",
+      "name": "Дзингудзи",
+      "color": "#228B22"
+    },
+    {
+      "id": "aldobrandini",
+      "name": "Альдобрандини",
+      "color": "#DAA520"
+    },
+    {
+      "id": "tewan",
+      "name": "Тэваны",
+      "color": "#9400D3"
     }
+
   ],
   "characters": [
     {
