@@ -157,11 +157,13 @@
   .alias{font-size:12px;color:var(--dim);font-style:italic}
   .tagline{font-size:13px;color:#a9b6c7;margin:0 0 13px;min-height:38px}
   .card-meta{display:flex;flex-wrap:wrap;gap:6px}
-  .badge{
-    font-size:11px;padding:3px 9px;border-radius:6px;letter-spacing:.3px;
-    background:color-mix(in srgb,var(--c) 16%, transparent);
-    color:var(--c);border:1px solid color-mix(in srgb,var(--c) 35%, transparent);
-  }
+.badge{
+  font-size:11px; padding:3px 9px; border-radius:6px; letter-spacing:.3px;
+  background:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 60%, #000);
+  font-weight:600;
+  /* цвет текста задаётся из JS */
+}
   .badge.ghost{background:transparent;color:var(--dim);border-color:var(--line)}
 
   /* флаги стран */
@@ -372,11 +374,12 @@
   .tree-section{ margin-bottom:32px; }
  .tree-section h3{ margin:0 0 12px; font-size:19px; letter-spacing:.3px;
                   display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
- .fam-badge{
+.fam-badge{
   font-size:15px; padding:6px 16px; border-radius:22px; letter-spacing:.4px;
   font-weight:600;
-  background:color-mix(in srgb, var(--fc) 15%, transparent);
-  color:var(--fc); border:1px solid color-mix(in srgb, var(--fc) 40%, transparent);
+  background:var(--fc);
+  border:1px solid color-mix(in srgb,var(--fc) 60%, #000);
+  /* цвет текста задаётся из JS */
 }
   .fam-plus{ color:var(--dim); font-size:13px; font-weight:400; }
   .tree-section h3.neutral{ color:#8b98ab; font-size:13px; }
@@ -1019,6 +1022,39 @@ const bloodColor = c => {
   return (fam && fam.color) || "#8b98ab";
 };
 
+/* ============================================================
+   Читаемость текста на цветном фоне
+   ============================================================ */
+function isLightColor(hex){
+  if (!hex || typeof hex !== 'string') return false;
+  const c = hex.replace('#', '').trim();
+  if (c.length !== 6) return false;
+  const r = parseInt(c.slice(0, 2), 16);
+  const g = parseInt(c.slice(2, 4), 16);
+  const b = parseInt(c.slice(4, 6), 16);
+  if ([r,g,b].some(x => isNaN(x))) return false;
+  /* перцептивная яркость (WCAG-подобная) */
+  const L = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return L > 0.62;
+}
+
+/* Возвращает цвет текста, читаемый на фоне указанного цвета */
+function textOnColor(hex){
+  return isLightColor(hex) ? '#0b0f15' : '#FFFFF0';
+}
+
+/* Возвращает цвет текста по clanName персонажа */
+function textOnClan(c){
+  const key = c.faction;
+  if (!key) return '#FFFFF0';
+  let color = '#8b98ab';
+  if (DB.families){
+    const f = DB.families.find(x => x.id === key || x.name === key);
+    if (f && f.color) color = f.color;
+  }
+  return textOnColor(color);
+}
+
 /* Читаемое имя клана — вместо латинского id */
 function clanName(c){
   if (!c.faction) return 'Вне кланов';
@@ -1483,8 +1519,7 @@ function renderCards(){
         if (activeFaction !== 'Все' && clanName(c) !== activeFaction) return false;
     if (activeCountry !== 'Все' && !(c.countries || []).includes(activeCountry)) return false;
     if (!q) return true;
-    return [c.name, c.alias, c.role, c.faction, c.tagline, ...(c.tags || [])]
-      .join(' ').toLowerCase().includes(q);
+    return (c.name || '').toLowerCase().includes(q);
   });
 
   if (!list.length){ $('#cardGrid').innerHTML = `<p class="empty">Никого не нашлось.</p>`; return; }
@@ -1504,7 +1539,7 @@ function renderCards(){
       </div>
       <p class="tagline">${esc(c.tagline)}</p>
       <div class="card-meta">
-        <span class="badge">${esc(clanName(c))}</span>
+                <span class="badge" style="color:${textOnClan(c)}">${esc(clanName(c))}</span>
         ${c.countries?.length ? `<span class="badge ghost">${flagsHTML(c.countries)}</span>` : ''}
         ${life ? `<span class="badge ghost">${life}</span>` : ''}
         ${c.born != null ? `<span class="badge ghost">${age.text}</span>` : ''}
@@ -3214,7 +3249,8 @@ function renderTree(){
     labelEl.className = 'tree-cluster-label';
     labelEl.style.left = (xOff + cluster.width / 2) + 'px';
     labelEl.style.top = LABEL_TOP + 'px';
-    labelEl.innerHTML = `<span class="fam-badge" style="--fc:${esc(cluster.color)}">${esc(cluster.name)}</span>`;
+        const textCol = textOnColor(cluster.color);
+    labelEl.innerHTML = `<span class="fam-badge" style="--fc:${esc(cluster.color)};color:${textCol}">${esc(cluster.name)}</span>`;
     inner.appendChild(labelEl);
 
     /* узлы */
