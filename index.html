@@ -143,7 +143,8 @@
     position:absolute; top:12px; right:12px; display:flex; gap:5px;
     opacity:0; transition:.15s; z-index:2;
   }
-  .card:hover .card-actions{opacity:1}
+  .card:hover .card-actions,
+  .loc-card:hover .card-actions{ opacity:1; }
   .card-actions button{
     width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
     background:rgba(11,15,21,.85); border:1px solid var(--line); color:var(--dim);
@@ -853,6 +854,58 @@
   padding:8px 11px; font-size:12.5px; color:var(--dim); font-style:italic;
 }
 
+/* viewport для древа с zoom + pan */
+#treeViewport{
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 260px);
+  min-height: 480px;
+  overflow: hidden;
+  background:
+    radial-gradient(700px 400px at 50% 50%, rgba(35,48,66,.55), transparent 70%),
+    var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  cursor: grab;
+  touch-action: none;
+}
+#treeViewport.dragging{ cursor: grabbing; }
+
+#treeInner{
+  position: absolute;
+  top: 0; left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+/* заголовок кластера — теперь абсолютный, поверх полотна */
+.tree-cluster-label{
+  position:absolute; transform:translateX(-50%);
+  z-index:2; white-space:nowrap; pointer-events:none;
+}
+
+/* контролы зума */
+.tree-zoom{
+  display:inline-flex; align-items:center; gap:4px;
+  background:var(--bg2); border:1px solid var(--line);
+  border-radius:10px; padding:4px 6px;
+}
+.tree-zoom button{
+  background:transparent; border:0; color:var(--dim);
+  width:26px; height:26px; border-radius:7px;
+  cursor:pointer; font:inherit; font-size:15px;
+  line-height:1; padding:0;
+  transition:.15s;
+}
+.tree-zoom button:hover{ color:var(--text); background:var(--card2); }
+.tree-zoom span{
+  font-size:12px; color:var(--dim); min-width:42px; text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+
+/* .tree-canvas больше не используется — если где-то остался, нейтрализуем */
+.tree-canvas{ all: unset; }
+
 @media (max-width:640px){
   .rel-edit-row{ grid-template-columns:1fr 1fr !important; }
 }
@@ -973,9 +1026,15 @@
         Только найденные
       </label>
       <button class="btn-toggle" id="bloodOnlyBtn">○ Все</button>
+      <div class="tree-zoom">
+  <button id="treeZoomOut" title="Уменьшить">−</button>
+  <span id="treeZoomLevel">100%</span>
+  <button id="treeZoomIn" title="Увеличить">+</button>
+  <button id="treeFit" title="Вписать в экран">⤢</button>
+</div>
       <span style="color:var(--dim);font-size:13px">Клик по узлу открывает карточку.</span>
     </div>
-    <div id="tree"></div>
+    <div id="treeViewport"><div id="treeInner"></div></div>
   </section>
 </main>
 
@@ -1021,6 +1080,35 @@ function clanName(c){
     if (f) return f.name;
   }
   return c.faction;
+}
+
+/* ============================================================
+   Автоматическая подпись для родственных связей по полу
+   ============================================================ */
+function displayRelLabel(r, viewingId){
+  const otherId = r.a === viewingId ? r.b : r.a;
+  const other = byId(otherId);
+
+  /* если у второго нет пола — оставляем подпись как есть */
+  if (!other || !other.gender) return r.label || '';
+
+  const g = other.gender;
+
+  if (r.t === 'брат'){
+    return g === 'м' ? 'Брат' : 'Сестра';
+  }
+  if (r.t === 'родитель'){
+    const otherIsParent = r.a === otherId;   /* other — родитель viewing? */
+    if (otherIsParent){
+      return g === 'м' ? 'Отец' : 'Мать';
+    } else {
+      return g === 'м' ? 'Сын' : 'Дочь';
+    }
+  }
+  if (r.t === 'супруг'){
+    return g === 'м' ? 'Муж' : 'Жена';
+  }
+  return r.label || r.t;
 }
 
 /* Цвет родного клана — для древа */
@@ -1775,22 +1863,15 @@ function openChar(id){
     const otherId = isA ? r.b : r.a;
     const o = byId(otherId);
 
-    /* переводим тип связи в точку зрения текущего персонажа */
     let t = r.t;
-    let label = r.label;
-
     if (r.t === 'родитель'){
-      /* r.a — родитель r.b */
-      if (isA){
-        /* я родитель → у другого я «родитель» */
-        t = 'родитель';
-      } else {
-        /* другой родитель мне → я «ребёнок» */
-        t = 'ребёнок';
-      }
+      t = isA ? 'родитель' : 'ребёнок';
     } else if (r.t === 'брат'){
       t = 'брат / сестра';
     }
+
+    /* подпись считается автоматически по полу второго */
+    const label = displayRelLabel(r, id);
 
     return { o, t, label };
   }).filter(r => r.o);
@@ -1985,7 +2066,7 @@ function confirmDeleteLocation(id){
    ============================================================ */
 function openCharForm(id){
   const c = id ? byId(id) : {
-    id: uid(), name:'', alias:'', faction:Object.keys(DB.factions)[0] || '',
+    id: uid(), name:'', alias:'', gender: '', faction:Object.keys(DB.factions)[0] || '',
     bornInto:'', countries:[], role:'', status:'жив(а)', tagline:'', tags:[],
     bio:'', quote:'', traits:{ 'Воля':5, 'Хитрость':5, 'Отвага':5, 'Милосердие':5 },
     secret:'', photo:'', born: viewYear, died:null
@@ -2020,6 +2101,13 @@ function openCharForm(id){
       </label>
       <label>Профессия<input name="role" value="${esc(c.role)}"></label>
       <label>Статус<input name="status" value="${esc(c.status)}"></label>
+      <label>Пол
+        <select name="gender">
+          <option value="">— не указан —</option>
+          <option value="м" ${c.gender === 'м' ? 'selected' : ''}>Мужской</option>
+          <option value="ж" ${c.gender === 'ж' ? 'selected' : ''}>Женский</option>
+        </select>
+      </label>
       <label>Год рождения<input name="born" type="number" value="${esc(c.born || '')}"></label>
       <label>Год смерти <span class="hint">пусто = жив(а)</span><input name="died" type="number" value="${esc(c.died || '')}"></label>
 
@@ -2275,7 +2363,7 @@ function openCharForm(id){
     const diedRaw = get('died');
     const patch = {
       name, alias: get('alias'), faction: get('faction'), role: get('role'),
-      status: get('status'), tagline: get('tagline'), photo: get('photo'),
+      status: get('status'), gender: get('gender'), tagline: get('tagline'), photo: get('photo'),
       bornInto: get('bornInto'),
       born: bornRaw === '' ? null : +bornRaw,
       died: diedRaw === '' ? null : +diedRaw,
@@ -3243,20 +3331,80 @@ function applyTreeFilter(members){
 }
 
 /* ============================================================
+   Упорядочивание секций: связанные — рядом
+   ============================================================ */
+function orderClustersByConnection(clusters){
+  if (clusters.length <= 1) return clusters;
+
+  /* карта: id персонажа → индекс кластера */
+  const clusterOf = {};
+  clusters.forEach((c, i) => c.members.forEach(m => { clusterOf[m.id] = i; }));
+
+  /* рёбра между кластерами */
+  const adj = clusters.map(() => ({}));
+  (DB.relations || []).forEach(r => {
+    if (!['родитель', 'супруг', 'брат'].includes(r.t)) return;
+    const ci = clusterOf[r.a], cj = clusterOf[r.b];
+    if (ci == null || cj == null || ci === cj) return;
+    adj[ci][cj] = (adj[ci][cj] || 0) + 1;
+    adj[cj][ci] = (adj[cj][ci] || 0) + 1;
+  });
+
+  /* начинаем с самого большого кластера */
+  let start = 0;
+  for (let i = 1; i < clusters.length; i++){
+    if (clusters[i].members.length > clusters[start].members.length) start = i;
+  }
+
+  const used = new Set();
+  const order = [];
+  let current = start;
+
+  while (order.length < clusters.length){
+    order.push(current);
+    used.add(current);
+
+    let next = -1, bestScore = -1;
+    for (let i = 0; i < clusters.length; i++){
+      if (used.has(i)) continue;
+      let score = 0;
+      for (const o of order) score += adj[i][o] || 0;
+      if (score > bestScore ||
+          (score === bestScore && next !== -1 &&
+           clusters[i].members.length > clusters[next].members.length)){
+        bestScore = score;
+        next = i;
+      }
+    }
+    if (next === -1) break;
+    current = next;
+  }
+
+  /* остаток */
+  for (let i = 0; i < clusters.length; i++){
+    if (!used.has(i)) order.push(i);
+  }
+
+  return order.map(i => clusters[i]);
+}
+
+/* ============================================================
    Древо: единая отрисовка с глобальными поколениями
    ============================================================ */
 function renderTree(){
-  const container = $('#tree');
-  container.innerHTML = '';
+  const viewport = document.getElementById('treeViewport');
+  const inner = document.getElementById('treeInner');
+  if (!viewport || !inner) return;
+  inner.innerHTML = '';
 
-  /* --- 1. глобальные поколения --- */
+  /* --- глобальные поколения --- */
   const gen = computeGlobalGenerations();
   const allGens = DB.characters.map(c => gen[c.id] ?? 0);
   const minGen = allGens.length ? Math.min(...allGens) : 0;
   const maxGen = allGens.length ? Math.max(...allGens) : 0;
   const rows = maxGen - minGen + 1;
 
-  /* --- 2. группировка по faction --- */
+  /* --- группировка по faction --- */
   const groups = {};
   DB.characters.forEach(c => {
     const key = c.faction || '_orphan';
@@ -3272,40 +3420,41 @@ function renderTree(){
     groups[key].members.push(c);
   });
 
-  /* --- 3. фильтр по поиску и «только кровные» --- */
+  /* --- фильтр --- */
   const clusters = [];
   Object.values(groups).forEach(g => {
     let members = g.members;
-    if (bloodOnly){
-      members = members.filter(m => m.bornInto === g.key);
-    }
+    if (bloodOnly) members = members.filter(m => m.bornInto === g.key);
     const { members: shown, matched } = applyTreeFilter(members);
     if (!shown.length) return;
     clusters.push({ ...g, members: shown, matched });
   });
 
   if (!clusters.length){
-    container.innerHTML = `<p class="empty" style="padding:40px;text-align:center">Ничего не найдено.</p>`;
+    inner.innerHTML = `<p class="empty" style="padding:40px;text-align:center;font-style:italic">Ничего не найдено.</p>`;
+    inner.style.width = '100%';
+    inner.style.height = '200px';
+    treeApplyTransform();
     return;
   }
 
-  clusters.sort((a, b) => b.members.length - a.members.length);
+  /* --- порядок секций: связанные рядом --- */
+  const ordered = orderClustersByConnection(clusters);
 
-  /* --- 4. геометрия --- */
-  const COL_W = 200, ROW_H = 230, NODE_H = 56, PAD = 70, GAP = 100, LABEL_TOP = 20;
+  /* --- геометрия --- */
+  const COL_W = 200, ROW_H = 230, NODE_H = 56, PAD = 70, GAP = 60, LABEL_TOP = 20;
 
   const spouseOf = {};
   DB.relations.filter(r => r.t === 'супруг').forEach(r => {
     spouseOf[r.a] = r.b; spouseOf[r.b] = r.a;
   });
 
-  clusters.forEach(cluster => {
+  ordered.forEach(cluster => {
     const byGen = {};
     cluster.members.forEach(m => {
       const g = gen[m.id] ?? 0;
       (byGen[g] = byGen[g] || []).push(m);
     });
-    /* супруги рядом */
     Object.values(byGen).forEach(arr => {
       arr.sort((a,b) => a.name.localeCompare(b.name, 'ru'));
       const sorted = [], used = new Set();
@@ -3317,37 +3466,28 @@ function renderTree(){
       });
       arr.length = 0; arr.push(...sorted);
     });
-
     const maxCols = Math.max(...Object.values(byGen).map(a => a.length), 1);
     cluster.byGen = byGen;
     cluster.width = Math.max(320, maxCols * COL_W + PAD * 2);
   });
 
-  const totalW = clusters.reduce((s, c) => s + c.width, 0) + GAP * (clusters.length + 1);
+  const totalW = ordered.reduce((s, c) => s + c.width, 0) + GAP * (ordered.length + 1);
   const totalH = rows * ROW_H + PAD + LABEL_TOP;
 
-  /* --- 5. контейнер --- */
-  const section = document.createElement('div');
-  section.className = 'tree-section';
-  section.innerHTML = `<div class="tree-canvas"><div class="tree-inner"></div></div>`;
-  container.appendChild(section);
-  const inner = section.querySelector('.tree-inner');
   inner.style.width = totalW + 'px';
   inner.style.height = totalH + 'px';
 
-  /* --- 6. позиционируем узлы --- */
+  /* --- позиционируем --- */
   const allPos = {};
-
   let xOff = GAP;
-  clusters.forEach(cluster => {
-    cluster.xOff = xOff;
 
+  ordered.forEach(cluster => {
     /* заголовок кластера */
     const labelEl = document.createElement('div');
     labelEl.className = 'tree-cluster-label';
     labelEl.style.left = (xOff + cluster.width / 2) + 'px';
     labelEl.style.top = LABEL_TOP + 'px';
-        const textCol = textOnColor(cluster.color);
+    const textCol = textOnColor(cluster.color);
     labelEl.innerHTML = `<span class="fam-badge" style="--fc:${esc(cluster.color)};color:${textCol}">${esc(cluster.name)}</span>`;
     inner.appendChild(labelEl);
 
@@ -3358,7 +3498,6 @@ function renderTree(){
       arr.forEach((m, i) => {
         const x = startX + i * COL_W;
         const y = PAD + LABEL_TOP + gN * ROW_H + NODE_H;
-
         allPos[m.id] = { x, y };
 
         const isMatched = !cluster.matched || cluster.matched.has(m.id);
@@ -3375,19 +3514,19 @@ function renderTree(){
     xOff += cluster.width + GAP;
   });
 
-  /* --- 7. единый SVG с рёбрами --- */
+  /* --- SVG с рёбрами --- */
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('class', 'tree-svg');
   svg.setAttribute('width', totalW);
   svg.setAttribute('height', totalH);
   svg.style.left = '0';
   svg.style.top = '0';
+  svg.style.position = 'absolute';
+  svg.style.pointerEvents = 'none';
 
-  const AVATAR_R = 28;
-  const NAME_BLOCK = 46;
+  const AVATAR_R = 28, NAME_BLOCK = 46;
   const visibleIds = new Set(Object.keys(allPos));
 
-  /* родительские рёбра — их может быть между секциями */
   DB.relations.filter(r => r.t === 'родитель').forEach(r => {
     if (!visibleIds.has(r.a) || !visibleIds.has(r.b)) return;
     const a = allPos[r.a], b = allPos[r.b];
@@ -3403,7 +3542,6 @@ function renderTree(){
     svg.appendChild(path);
   });
 
-  /* супружеские рёбра — тоже могут идти между секциями */
   const seenSpouse = new Set();
   DB.relations.filter(r => r.t === 'супруг').forEach(r => {
     const k = [r.a, r.b].sort().join('|');
@@ -3421,7 +3559,127 @@ function renderTree(){
   });
 
   inner.appendChild(svg);
+
+  /* --- применяем текущий zoom/pan --- */
+  treeApplyTransform();
+
+  /* авто-фит только при первом рендере после загрузки страницы */
+  if (!window.__treeFittedOnce){
+    window.__treeFittedOnce = true;
+    setTimeout(() => treeFit(), 30);
+  } else {
+    /* при перерисовке (поиск, кровные) просто применяем текущий zoom/pan */
+    treeApplyTransform();
+  }
 }
+
+/* ============================================================
+   Управление зумом и панорамированием древа
+   ============================================================ */
+let treeScale = 1, treeTx = 0, treeTy = 0;
+
+function treeApplyTransform(){
+  const inner = document.getElementById('treeInner');
+  if (!inner) return;
+  inner.style.transform = `translate(${treeTx}px, ${treeTy}px) scale(${treeScale})`;
+  const lvl = document.getElementById('treeZoomLevel');
+  if (lvl) lvl.textContent = Math.round(treeScale * 100) + '%';
+}
+
+function treeFit(force){
+  const vp = document.getElementById('treeViewport');
+  const inner = document.getElementById('treeInner');
+  if (!vp || !inner) return;
+  const vpW = vp.clientWidth, vpH = vp.clientHeight;
+  const iw = parseFloat(inner.style.width) || 1000;
+  const ih = parseFloat(inner.style.height) || 600;
+  const pad = 40;
+  const sc = Math.min((vpW - pad) / iw, (vpH - pad) / ih, 1);
+
+  const MIN_READABLE = 0.6;
+
+  /* если вписать целиком нельзя без потери читаемости — открываем по центру в 100% */
+  if (!force && sc < MIN_READABLE){
+    treeScale = 1;
+    /* если древо шире окна — прижимаем влево, если уже — центрируем */
+    treeTx = iw <= vpW ? (vpW - iw) / 2 : 20;
+    /* то же по вертикали */
+    treeTy = ih <= vpH ? (vpH - ih) / 2 : 20;
+    treeApplyTransform();
+    return;
+  }
+
+  treeScale = Math.max(0.15, sc);
+  treeTx = (vpW - iw * treeScale) / 2;
+  treeTy = (vpH - ih * treeScale) / 2;
+  treeApplyTransform();
+}
+
+function treeZoom(factor){
+  const vp = document.getElementById('treeViewport');
+  if (!vp) return;
+  const cx = vp.clientWidth / 2;
+  const cy = vp.clientHeight / 2;
+  const newScale = Math.max(0.15, Math.min(3, treeScale * factor));
+  treeTx = cx - (cx - treeTx) * (newScale / treeScale);
+  treeTy = cy - (cy - treeTy) * (newScale / treeScale);
+  treeScale = newScale;
+  treeApplyTransform();
+}
+
+/* контролы */
+document.getElementById('treeZoomIn').onclick  = () => treeZoom(1.25);
+document.getElementById('treeZoomOut').onclick = () => treeZoom(0.8);
+document.getElementById('treeFit').onclick     = () => treeFit(true);
+
+/* зум колесом */
+document.getElementById('treeViewport').addEventListener('wheel', e => {
+  if (!e.ctrlKey && !e.metaKey && Math.abs(e.deltaY) < 30) return;
+  e.preventDefault();
+  const vp = e.currentTarget;
+  const r = vp.getBoundingClientRect();
+  const cx = e.clientX - r.left;
+  const cy = e.clientY - r.top;
+  const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+  const newScale = Math.max(0.15, Math.min(3, treeScale * factor));
+  treeTx = cx - (cx - treeTx) * (newScale / treeScale);
+  treeTy = cy - (cy - treeTy) * (newScale / treeScale);
+  treeScale = newScale;
+  treeApplyTransform();
+}, { passive: false });
+
+/* панорамирование мышью */
+(function(){
+  const vp = document.getElementById('treeViewport');
+  let dragging = false, lastX = 0, lastY = 0;
+
+  vp.addEventListener('pointerdown', e => {
+    /* не начинаем pan, если клик по узлу */
+    if (e.target.closest('.tree-node')) return;
+    dragging = true;
+    lastX = e.clientX; lastY = e.clientY;
+    vp.classList.add('dragging');
+    vp.setPointerCapture(e.pointerId);
+  });
+
+  vp.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    treeTx += e.clientX - lastX;
+    treeTy += e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    treeApplyTransform();
+  });
+
+  vp.addEventListener('pointerup', e => {
+    dragging = false;
+    vp.classList.remove('dragging');
+    try { vp.releasePointerCapture(e.pointerId); } catch(_){}
+  });
+  vp.addEventListener('pointercancel', () => {
+    dragging = false;
+    vp.classList.remove('dragging');
+  });
+})();
 
 $('#bloodOnlyBtn').onclick = () => {
   bloodOnly = !bloodOnly;
@@ -3467,6 +3725,7 @@ $('#btnEdit').onclick = () => {
   $('#btnAddLocation').hidden = !editMode;
   renderCards();
   renderTimeline();
+  renderLocations();
 };
 
 $('#btnSave').onclick = saveFile;
