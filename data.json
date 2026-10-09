@@ -125,6 +125,11 @@
       "color": "#DAA520"
     },
     {
+      "id": "andolini",
+      "name": "Андолини",
+      "color": "#808000"
+    },
+    {
       "id": "tewan",
       "name": "Тэваны",
       "color": "#9400D3"
