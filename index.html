@@ -3527,19 +3527,85 @@ function renderTree(){
   const AVATAR_R = 28, NAME_BLOCK = 46;
   const visibleIds = new Set(Object.keys(allPos));
 
-  DB.relations.filter(r => r.t === 'родитель').forEach(r => {
-    if (!visibleIds.has(r.a) || !visibleIds.has(r.b)) return;
-    const a = allPos[r.a], b = allPos[r.b];
-    const startY = a.y + AVATAR_R + NAME_BLOCK;
-    const endY = b.y - AVATAR_R;
-    const midY = (startY + endY) / 2;
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', `M ${a.x} ${startY} L ${a.x} ${midY} L ${b.x} ${midY} L ${b.x} ${endY}`);
-    path.setAttribute('stroke', bloodColor(byId(r.b)) || '#8fa3b8');
-    path.setAttribute('stroke-width', '1.6');
-    path.setAttribute('fill', 'none');
-    path.setAttribute('opacity', '0.55');
-    svg.appendChild(path);
+    /* ============================================================
+     Родительские рёбра: группируем детей по родительской паре,
+     рисуем одну вертикаль + горизонталь + вертикали к детям
+     ============================================================ */
+  const parentEdges = DB.relations.filter(r => r.t === 'родитель');
+
+  /* каждый ребёнок → список его видимых родителей */
+  const childrenByParents = {};
+  parentEdges.forEach(r => {
+    if (!visibleIds.has(r.b)) return;
+    const parents = parentEdges
+      .filter(x => x.b === r.b && visibleIds.has(x.a))
+      .map(x => x.a)
+      .sort();
+    if (!parents.length) return;
+    const key = parents.join('|');
+    if (!childrenByParents[key]) childrenByParents[key] = { parents, children: [] };
+    if (!childrenByParents[key].children.includes(r.b)) {
+      childrenByParents[key].children.push(r.b);
+    }
+  });
+
+  /* helper для рисования линии */
+  const makePath = (d, color) => {
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p.setAttribute('d', d);
+    p.setAttribute('stroke', color);
+    p.setAttribute('stroke-width', '1.6');
+    p.setAttribute('fill', 'none');
+    p.setAttribute('opacity', '0.55');
+    p.setAttribute('stroke-linejoin', 'round');
+    return p;
+  };
+
+  Object.values(childrenByParents).forEach(group => {
+    const parentPositions = group.parents.map(p => allPos[p]).filter(Boolean);
+    if (!parentPositions.length) return;
+
+    /* X ствола: для пары — середина между родителями, для одного — его X */
+    let trunkX;
+    if (parentPositions.length === 1){
+      trunkX = parentPositions[0].x;
+    } else {
+      const xs = parentPositions.map(p => p.x);
+      trunkX = (Math.min(...xs) + Math.max(...xs)) / 2;
+    }
+
+    /* Y начала ствола: низ самого нижнего родителя */
+    const parentBottomY = Math.max(
+      ...parentPositions.map(p => p.y + AVATAR_R + NAME_BLOCK)
+    );
+
+    /* Y детей (верх аватара) */
+    const childTops = group.children
+      .map(c => allPos[c] ? allPos[c].y - AVATAR_R : null)
+      .filter(v => v != null);
+    if (!childTops.length) return;
+
+    /* Y горизонтали — середина между родителем и детьми */
+    const railY = (parentBottomY + Math.min(...childTops)) / 2;
+
+    /* цвет линии — по bloodColor первого ребёнка */
+    const lineColor = bloodColor(byId(group.children[0])) || '#8fa3b8';
+
+    /* вертикаль от родителя (пары) до горизонтали */
+    svg.appendChild(makePath(`M ${trunkX} ${parentBottomY} L ${trunkX} ${railY}`, lineColor));
+
+    /* горизонталь через всех детей */
+    const childXs = group.children.map(c => allPos[c].x);
+    const minX = Math.min(trunkX, ...childXs);
+    const maxX = Math.max(trunkX, ...childXs);
+    svg.appendChild(makePath(`M ${minX} ${railY} L ${maxX} ${railY}`, lineColor));
+
+    /* вертикали от горизонтали к каждому ребёнку */
+    group.children.forEach(c => {
+      const cx = allPos[c].x;
+      const cy = allPos[c].y - AVATAR_R;
+      svg.appendChild(makePath(`M ${cx} ${railY} L ${cx} ${cy}`, lineColor));
+    });
   });
 
   const seenSpouse = new Set();
