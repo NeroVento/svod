@@ -112,7 +112,7 @@
     {
       "id": "kanda",
       "name": "Канды",
-      "color": "#00008B"
+      "color": "#4169E1"
     },
     {
       "id": "jinguji",
@@ -722,6 +722,33 @@
       "photo": "",
       "born": 40,
       "died": null
+    },
+    {
+      "id": "cmv2yx5v39gbc",
+      "name": "Ушиджима Сацуки",
+      "alias": "Сацу",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Врач",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Смелость": 10,
+        "Владение японским матерным": 8,
+        "Шприцов Жане": 3,
+        "Розовое золото": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 43,
+      "died": null
     }
   ],
   "events": [],
@@ -1009,14 +1036,14 @@
       "label": "Муж"
     },
     {
-      "a": "cmv2vlwh1a2d0",
-      "b": "cmuzggner81r2",
+      "a": "cmuzggner81r2",
+      "b": "cmv2vlwh1a2d0",
       "t": "родитель",
       "label": "Отец"
     },
     {
-      "a": "cmv2vlwh1a2d0",
-      "b": "cmuzhz7a4ydpu",
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmv2vlwh1a2d0",
       "t": "родитель",
       "label": "Отец"
     },
@@ -1031,6 +1058,12 @@
       "b": "cmuzin7ne0b28",
       "t": "брат",
       "label": "Брат"
+    },
+    {
+      "a": "cmv2yx5v39gbc",
+      "b": "cmv2vlwh1a2d0",
+      "t": "супруг",
+      "label": "Муж"
     }
   ],
   "locations": [
