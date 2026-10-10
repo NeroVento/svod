@@ -242,7 +242,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 23,
+      "born": 25,
       "died": null
     },
     {
@@ -269,7 +269,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 7,
+      "born": 9,
       "died": null
     },
     {
@@ -554,6 +554,174 @@
       "photo": "",
       "born": 43,
       "died": null
+    },
+    {
+      "id": "cmv2urgg38u9d",
+      "name": "Камелот Витор",
+      "alias": "Вики, Викусь",
+      "gender": "м",
+      "faction": "kanda",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Организатор свадеб",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "Глава фан-клуба Канды-сана",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 8,
+        "Отвага": 10,
+        "Сила зайчоночьей тени": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 47,
+      "died": null
+    },
+    {
+      "id": "cmv2uz34q6ugf",
+      "name": "Ямадзаки Ичиго",
+      "alias": "Ич, Ичуня",
+      "gender": "м",
+      "faction": "",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "Хобби - очаровывать парней братьев",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 3,
+        "Отвага": 10,
+        "Харизма": 10,
+        "Иммунитет к мужикам в форрррме": 0
+      },
+      "secret": "",
+      "photo": "",
+      "born": 51,
+      "died": null
+    },
+    {
+      "id": "cmv2v85dtrzox",
+      "name": "Камелот Тацуя",
+      "alias": "Тацу",
+      "gender": "м",
+      "faction": "camelot",
+      "bornInto": "kanda",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Оперирующий травматолог-реаниматолог",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 3,
+        "Отвага": 10,
+        "Любовь к булочкам Шу": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 40,
+      "died": null
+    },
+    {
+      "id": "cmv2vbym13mif",
+      "name": "Канда Юу",
+      "alias": "Канда-сан",
+      "gender": "м",
+      "faction": "kanda",
+      "bornInto": "kanda",
+      "countries": [
+        "jp"
+      ],
+      "role": "Полицейский, следователь, начальник отдела аналитики ЦУ МВД",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "Не по-кандитерски",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 0,
+        "Отвага": 10,
+        "Иммунитет к нежным крольчатам": 0,
+        "Народная любовь": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 47,
+      "died": null
+    },
+    {
+      "id": "cmv2vhkuz6n6f",
+      "name": "Ямадзаки Соуске",
+      "alias": "Соу, Генерал (Лу)",
+      "gender": "м",
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Военный, спецназовец",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "Есть кот мейн-кун Араши, он же Арашенька. Крайне свободолюбив и сбегает при любой возможности (в основном в больничное крыло к Сацуки).",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 2,
+        "Отвага": 10,
+        "Дедовские вздохи": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 41,
+      "died": null
+    },
+    {
+      "id": "cmv2vlwh1a2d0",
+      "name": "Ушиджима Чикара",
+      "alias": "Чики, Коммивояжёр",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Главный наследник Вакатоша, бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 8,
+        "Отвага": 10,
+        "Настойчивость": 10,
+        "Вероятность наличия клубники в дипломате": 5
+      },
+      "secret": "",
+      "photo": "",
+      "born": 40,
+      "died": null
     }
   ],
   "events": [],
@@ -578,30 +746,6 @@
     },
     {
       "a": "cmux9di9n7qha",
-      "b": "cmuyls26p9sy5",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuyls26p9sy5",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuyls26p9sy5",
-      "b": "cmuxcuaxsl2dp",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuymve45bjgp",
-      "b": "cmuyls26p9sy5",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmux9di9n7qha",
       "b": "cmuzi46i1m8on",
       "t": "родитель",
       "label": "Отец"
@@ -615,12 +759,6 @@
     {
       "a": "cmuzi46i1m8on",
       "b": "cmuxcuaxsl2dp",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzi46i1m8on",
-      "b": "cmuyls26p9sy5",
       "t": "брат",
       "label": "Брат"
     },
@@ -661,34 +799,10 @@
       "label": "Муж"
     },
     {
-      "a": "cmuyls26p9sy5",
-      "b": "cmuziwaytfgbr",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuymve45bjgp",
-      "b": "cmuziwaytfgbr",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmuzj50p0nkg0",
       "b": "cmuziwaytfgbr",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmuymve45bjgp",
-      "b": "cmuzjcz1bk3pf",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuyls26p9sy5",
-      "b": "cmuzjcz1bk3pf",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuzjcz1bk3pf",
@@ -716,12 +830,6 @@
     },
     {
       "a": "cmuzfpwejm8f5",
-      "b": "cmuyls26p9sy5",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzfpwejm8f5",
       "b": "cmuzi46i1m8on",
       "t": "брат",
       "label": "Сестра"
@@ -746,12 +854,6 @@
     },
     {
       "a": "cmuzf2fs1vpov",
-      "b": "cmuyls26p9sy5",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzf2fs1vpov",
       "b": "cmuzi46i1m8on",
       "t": "брат",
       "label": "Сестра"
@@ -767,6 +869,168 @@
       "b": "cmuzfpwejm8f5",
       "t": "брат",
       "label": "Сестра"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuxcuaxsl2dp",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuzi46i1m8on",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuziwaytfgbr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuzjcz1bk3pf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuzfpwejm8f5",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuzf2fs1vpov",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmuziwaytfgbr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmuzjcz1bk3pf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmuyls26p9sy5",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmv2uz34q6ugf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmv2uz34q6ugf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2uz34q6ugf",
+      "b": "cmuziwaytfgbr",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2uz34q6ugf",
+      "b": "cmuzjcz1bk3pf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmv2urgg38u9d",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmv2urgg38u9d",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmuziwaytfgbr",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmuzjcz1bk3pf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmv2uz34q6ugf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2v85dtrzox",
+      "b": "cmuzjcz1bk3pf",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmv2urgg38u9d",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv2vhkuz6n6f",
+      "b": "cmv2uz34q6ugf",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv2vlwh1a2d0",
+      "b": "cmuzggner81r2",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vlwh1a2d0",
+      "b": "cmuzhz7a4ydpu",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vlwh1a2d0",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2vlwh1a2d0",
+      "b": "cmuzin7ne0b28",
+      "t": "брат",
+      "label": "Брат"
     }
   ],
   "locations": [
