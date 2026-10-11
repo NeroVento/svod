@@ -105,6 +105,11 @@
       "color": "#8B0000"
     },
     {
+      "id": "isai",
+      "name": "Исаи",
+      "color": "#A0522D"
+    },
+    {
       "id": "salo",
       "name": "Сало",
       "color": "#8B4513"
@@ -160,8 +165,9 @@
       },
       "secret": "Путает левых детей из Новоушина с внуками.",
       "photo": "",
-      "born": 0,
-      "died": null
+      "born": null,
+      "died": null,
+      "generation": 0
     },
     {
       "id": "cmuxba6cvck1l",
@@ -187,8 +193,9 @@
       },
       "secret": "",
       "photo": "",
-      "born": 0,
-      "died": null
+      "born": null,
+      "died": null,
+      "generation": 0
     },
     {
       "id": "cmuxcuaxsl2dp",
@@ -380,8 +387,9 @@
       },
       "secret": "",
       "photo": "",
-      "born": 0,
-      "died": null
+      "born": null,
+      "died": null,
+      "generation": 0
     },
     {
       "id": "cmuzhz7a4ydpu",
@@ -409,7 +417,8 @@
       "secret": "",
       "photo": "",
       "born": 12,
-      "died": null
+      "died": null,
+      "generation": 0
     },
     {
       "id": "cmuzi46i1m8on",
@@ -729,7 +738,7 @@
       "alias": "Сацу",
       "gender": "м",
       "faction": "ushijima",
-      "bornInto": "",
+      "bornInto": "isai",
       "countries": [
         "jp"
       ],
@@ -749,40 +758,332 @@
       "photo": "",
       "born": 43,
       "died": null
+    },
+    {
+      "id": "cmv2zrw3u5am8",
+      "name": "Ушиджима Чигуса",
+      "alias": "Гусик",
+      "gender": "ж",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Бизнес-вумен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Бульдожья хватка": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 40,
+      "died": null
+    },
+    {
+      "id": "cmv2zvr553mnb",
+      "name": "Ушиджима Сало",
+      "alias": "",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Модель, модельер",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Хладнокровие": 7,
+        "Style": 10,
+        "Шоколадность": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 36,
+      "died": null
+    },
+    {
+      "id": "cmv2zxzs167xz",
+      "name": "Ушиджима Гайо",
+      "alias": "",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 67,
+      "died": null
+    },
+    {
+      "id": "cmv2zzzr5x4j3",
+      "name": "Ушиджима Раэль",
+      "alias": "",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 70,
+      "died": null
+    },
+    {
+      "id": "cmv301f1kpheg",
+      "name": "Ушиджима Иргалем",
+      "alias": "Иргаль",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Хитрость": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 73,
+      "died": null
+    },
+    {
+      "id": "cmv3039g0hxn6",
+      "name": "Ушиджима Руиру",
+      "alias": "",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Балбеска",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Балбеска": 7,
+        "Чувство юмора": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 78,
+      "died": null
+    },
+    {
+      "id": "cmv30c9x2xsbs",
+      "name": "Ушиджима Арман",
+      "alias": "",
+      "gender": "м",
+      "faction": "ushijima",
+      "bornInto": "",
+      "countries": [
+        "fr"
+      ],
+      "role": "Бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 71,
+      "died": null
+    },
+    {
+      "id": "cmv30n8va5klm",
+      "name": "Мацукава Такаши",
+      "alias": "Така",
+      "gender": "м",
+      "faction": "matsukawa",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Художник",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Орливость": 8,
+        "Хвостик": 10,
+        "Терпение": 7
+      },
+      "secret": "",
+      "photo": "",
+      "born": 3,
+      "died": null,
+      "generation": 0
+    },
+    {
+      "id": "cmv30t8wmf2rt",
+      "name": "Мацукава Иссэй",
+      "alias": "",
+      "gender": "м",
+      "faction": "matsukawa",
+      "bornInto": "matsukawa",
+      "countries": [
+        "jp"
+      ],
+      "role": "Акушер-андролог",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Кудри": 10,
+        "Ехидство": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
+      "died": null,
+      "generation": 0
+    },
+    {
+      "id": "cmv31pf8jze9r",
+      "name": "Папа Ивайзуми",
+      "alias": "",
+      "gender": "",
+      "generation": -1,
+      "faction": "iwaizumi",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Полицейский",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": -21,
+      "died": null
+    },
+    {
+      "id": "cmv31s4e2rdkt",
+      "name": "Мама Ивайзуми",
+      "alias": "",
+      "gender": "ж",
+      "generation": -1,
+      "faction": "iwaizumi",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Домохозяйка",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": -20,
+      "died": null
+    },
+    {
+      "id": "cmv31v31uco2w",
+      "name": "Ивайзуми Казума",
+      "alias": "Казу",
+      "gender": "м",
+      "generation": 0,
+      "faction": "iwaizumi",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Министр внутренних дел",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Усики": 10,
+        "Глазки": 10,
+        "Хитрожопость": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 7,
+      "died": null
+    },
+    {
+      "id": "cmv31yhop74se",
+      "name": "Ивайзуми Тетсуро",
+      "alias": "Тетсу",
+      "gender": "м",
+      "generation": 0,
+      "faction": "iwaizumi",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Усики": 10,
+        "Курячий смех": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
     }
   ],
   "events": [],
   "relations": [
-    {
-      "a": "cmux9di9n7qha",
-      "b": "cmuxba6cvck1l",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuxcuaxsl2dp",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmux9di9n7qha",
-      "b": "cmuxcuaxsl2dp",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmux9di9n7qha",
-      "b": "cmuzi46i1m8on",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuzi46i1m8on",
-      "t": "родитель",
-      "label": "Отец"
-    },
     {
       "a": "cmuzi46i1m8on",
       "b": "cmuxcuaxsl2dp",
@@ -794,36 +1095,6 @@
       "b": "cmuzfhizhzx89",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmuzggner81r2",
-      "b": "cmuzfhizhzx89",
-      "t": "родитель",
-      "label": "Муж"
-    },
-    {
-      "a": "cmuzggner81r2",
-      "b": "cmuzin7ne0b28",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmuzfhizhzx89",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmuzin7ne0b28",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmuzggner81r2",
-      "t": "супруг",
-      "label": "Муж"
     },
     {
       "a": "cmuzj50p0nkg0",
@@ -838,18 +1109,6 @@
       "label": "Брат"
     },
     {
-      "a": "cmux9di9n7qha",
-      "b": "cmuzfpwejm8f5",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuzfpwejm8f5",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmuzfpwejm8f5",
       "b": "cmuxcuaxsl2dp",
       "t": "брат",
@@ -860,18 +1119,6 @@
       "b": "cmuzi46i1m8on",
       "t": "брат",
       "label": "Сестра"
-    },
-    {
-      "a": "cmux9di9n7qha",
-      "b": "cmuzf2fs1vpov",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuzf2fs1vpov",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuzf2fs1vpov",
@@ -896,18 +1143,6 @@
       "b": "cmuzfpwejm8f5",
       "t": "брат",
       "label": "Сестра"
-    },
-    {
-      "a": "cmux9di9n7qha",
-      "b": "cmuyls26p9sy5",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuxba6cvck1l",
-      "b": "cmuyls26p9sy5",
-      "t": "родитель",
-      "label": "Сын"
     },
     {
       "a": "cmuyls26p9sy5",
@@ -1036,18 +1271,6 @@
       "label": "Муж"
     },
     {
-      "a": "cmuzggner81r2",
-      "b": "cmv2vlwh1a2d0",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmv2vlwh1a2d0",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmv2vlwh1a2d0",
       "b": "cmuzfhizhzx89",
       "t": "брат",
@@ -1060,8 +1283,314 @@
       "label": "Брат"
     },
     {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmuzin7ne0b28",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2vlwh1a2d0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zvr553mnb",
+      "b": "cmv2zrw3u5am8",
+      "t": "супруг",
+      "label": "Жена"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2zxzs167xz",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmv2zvr553mnb",
+      "b": "cmv2zxzs167xz",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2zzzr5x4j3",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmv2zvr553mnb",
+      "b": "cmv2zzzr5x4j3",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2zzzr5x4j3",
+      "b": "cmv2zxzs167xz",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv301f1kpheg",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmv2zvr553mnb",
+      "b": "cmv301f1kpheg",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv301f1kpheg",
+      "b": "cmv2zxzs167xz",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv301f1kpheg",
+      "b": "cmv2zzzr5x4j3",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv3039g0hxn6",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmv2zvr553mnb",
+      "b": "cmv3039g0hxn6",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv3039g0hxn6",
+      "b": "cmv2zxzs167xz",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv3039g0hxn6",
+      "b": "cmv2zzzr5x4j3",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv3039g0hxn6",
+      "b": "cmv301f1kpheg",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv30c9x2xsbs",
+      "b": "cmv301f1kpheg",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
       "a": "cmv2yx5v39gbc",
       "b": "cmv2vlwh1a2d0",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31s4e2rdkt",
+      "b": "cmv31pf8jze9r",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuxcuaxsl2dp",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuzi46i1m8on",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuzfpwejm8f5",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuzf2fs1vpov",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmux9di9n7qha",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv31pf8jze9r",
+      "b": "cmux9di9n7qha",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv31s4e2rdkt",
+      "b": "cmux9di9n7qha",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuxcuaxsl2dp",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuzi46i1m8on",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuzfpwejm8f5",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuzf2fs1vpov",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmuyls26p9sy5",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuxba6cvck1l",
+      "b": "cmux9di9n7qha",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmuzfhizhzx89",
+      "t": "родитель",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmuzin7ne0b28",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmv2vlwh1a2d0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmv2zrw3u5am8",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmuzfhizhzx89",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmuzin7ne0b28",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmv2vlwh1a2d0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmv2zrw3u5am8",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmuzggner81r2",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31pf8jze9r",
+      "b": "cmv30n8va5klm",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv31s4e2rdkt",
+      "b": "cmv30n8va5klm",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv30n8va5klm",
+      "b": "cmux9di9n7qha",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv30t8wmf2rt",
+      "b": "cmv30n8va5klm",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31s4e2rdkt",
+      "b": "cmv31v31uco2w",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmv31pf8jze9r",
+      "b": "cmv31v31uco2w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmux9di9n7qha",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmv30n8va5klm",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmv31yhop74se",
       "t": "супруг",
       "label": "Муж"
     }
@@ -1086,7 +1615,17 @@
         "cmuzin7ne0b28",
         "cmuzfhizhzx89",
         "cmuzhz7a4ydpu",
-        "cmuzggner81r2"
+        "cmuzggner81r2",
+        "cmv2vlwh1a2d0",
+        "cmv2yx5v39gbc",
+        "cmv2uz34q6ugf",
+        "cmv2vhkuz6n6f",
+        "cmv2urgg38u9d",
+        "cmv2vbym13mif",
+        "cmv30t8wmf2rt",
+        "cmv30n8va5klm",
+        "cmv31yhop74se",
+        "cmv31v31uco2w"
       ],
       "secret": ""
     }
