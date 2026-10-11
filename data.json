@@ -102,12 +102,17 @@
     {
       "id": "camelot",
       "name": "Камелоты",
-      "color": "#8B0000"
+      "color": "#800000"
     },
     {
       "id": "isai",
       "name": "Исаи",
       "color": "#A0522D"
+    },
+    {
+      "id": "bokuto",
+      "name": "Бокуто",
+      "color": "#F0E68C"
     },
     {
       "id": "salo",
