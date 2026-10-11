@@ -1896,6 +1896,11 @@ function openChar(id){
         if (!fam || fam.name === clanName(c)) return '';
         return `<div><b>Родной клан</b><span style="color:${esc(fam.color)}">${esc(fam.name)}</span></div>`;
       })()}
+      ${(() => {
+        const g = c.generation;
+        if (g == null) return '';
+        return `<div><b>Поколение</b><span>${g}</span></div>`;
+      })()}
       <div><b>Профессия</b><span>${esc(c.role)}</span></div>
       <div><b>Возраст · ${viewYear}</b><span>${age.text}${life ? ` <span style="color:var(--dim);font-size:12px">(${life})</span>` : ''}</span></div>
       <div><b>Страны</b><span>${flagsHTML(c.countries) || '—'}</span></div>
@@ -2066,7 +2071,7 @@ function confirmDeleteLocation(id){
    ============================================================ */
 function openCharForm(id){
   const c = id ? byId(id) : {
-    id: uid(), name:'', alias:'', gender: '', faction:Object.keys(DB.factions)[0] || '',
+    id: uid(), name:'', alias:'', gender: '', generation: null, faction:Object.keys(DB.factions)[0] || '',
     bornInto:'', countries:[], role:'', status:'жив(а)', tagline:'', tags:[],
     bio:'', quote:'', traits:{ 'Воля':5, 'Хитрость':5, 'Отвага':5, 'Милосердие':5 },
     secret:'', photo:'', born: viewYear, died:null
@@ -2107,6 +2112,9 @@ function openCharForm(id){
           <option value="м" ${c.gender === 'м' ? 'selected' : ''}>Мужской</option>
           <option value="ж" ${c.gender === 'ж' ? 'selected' : ''}>Женский</option>
         </select>
+      </label>
+      <label>Поколение <span class="hint">пусто = автоматически</span>
+        <input name="generation" type="number" value="${c.generation != null ? c.generation : ''}">
       </label>
       <label>Год рождения<input name="born" type="number" value="${esc(c.born || '')}"></label>
       <label>Год смерти <span class="hint">пусто = жив(а)</span><input name="died" type="number" value="${esc(c.died || '')}"></label>
@@ -2369,7 +2377,13 @@ function openCharForm(id){
       died: diedRaw === '' ? null : +diedRaw,
       tags: get('tags').split(',').map(s => s.trim()).filter(Boolean),
       countries: [...$('#formSheet').querySelectorAll('[name=country]:checked')].map(x => x.value),
-      bio: get('bio'), quote: get('quote'), traits, secret: get('secret')
+      bio: get('bio'), quote: get('quote'), traits, secret: get('secret'),
+      generation: (() => {
+        const v = get('generation');
+        if (v === '') return null;
+        const n = +v;
+        return isNaN(n) ? null : n;
+      })(),
     };
 
        if (isNew) DB.characters.push({ ...c, ...patch });
@@ -3164,21 +3178,63 @@ function computeGlobalGenerations(){
   const spouseEdges = rels.filter(r => r.t === 'супруг');
 
   const gen = {};
+  const fixed = new Set();
+
+  /* 1. ЯВНЫЕ значения — высший приоритет */
+  DB.characters.forEach(c => {
+    if (c.generation != null && !isNaN(c.generation)){
+      gen[c.id] = c.generation;
+      fixed.add(c.id);
+    }
+  });
+
   const parentsOf = {};
   DB.characters.forEach(c => parentsOf[c.id] = []);
   parentEdges.forEach(e => { if (parentsOf[e.b]) parentsOf[e.b].push(e.a); });
 
-  DB.characters.forEach(c => { if (!parentsOf[c.id].length) gen[c.id] = 0; });
+  /* 2. Отталкиваемся от явно заданных: их дети = их поколение + 1 */
+  const applyChildren = (fromId, baseGen) => {
+    parentEdges.forEach(e => {
+      if (e.a !== fromId) return;
+      if (fixed.has(e.b)) return;
+      const want = baseGen + 1;
+      if (gen[e.b] == null || gen[e.b] < want){
+        gen[e.b] = want;
+        applyChildren(e.b, want);
+      }
+    });
+  };
+  fixed.forEach(id => applyChildren(id, gen[id]));
+
+  /* 3. Отталкиваемся от явно заданных ВВЕРХ: их родители = поколение − 1 */
+  const applyParents = (fromId, baseGen) => {
+    (parentsOf[fromId] || []).forEach(pid => {
+      if (fixed.has(pid)) return;
+      const want = baseGen - 1;
+      if (gen[pid] == null || gen[pid] > want){
+        gen[pid] = want;
+        applyParents(pid, want);
+      }
+    });
+  };
+  fixed.forEach(id => applyParents(id, gen[id]));
+
+  /* 4. Оставшиеся без поколения — считаем как раньше */
+  DB.characters.forEach(c => {
+    if (gen[c.id] == null && !parentsOf[c.id].length) gen[c.id] = 0;
+  });
 
   let changed = true, safety = 0;
   while (changed && safety++ < 60){
     changed = false;
     parentEdges.forEach(e => {
+      if (fixed.has(e.b)) return;
       if (gen[e.a] == null) return;
       const want = gen[e.a] + 1;
       if (gen[e.b] == null || gen[e.b] < want){ gen[e.b] = want; changed = true; }
     });
   }
+
   DB.characters.forEach(c => { if (gen[c.id] == null) gen[c.id] = 0; });
 
   /* супруг без родителей подтягивается к уровню своей половины */
