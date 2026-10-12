@@ -906,6 +906,56 @@
 /* .tree-canvas больше не используется — если где-то остался, нейтрализуем */
 .tree-canvas{ all: unset; }
 
+/* строка фильтров с подписями */
+.toolbar.filters-row{
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.filter-group{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.filter-group > label{
+  font-size: 11px;
+  letter-spacing: .6px;
+  color: var(--dim);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 3px;
+}
+.filter-group .chips{
+  padding-bottom: 1px;   /* выравнивание чипов по высоте с селектами */
+}
+.filter-select{
+  padding: 9px 32px 9px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 11px;
+  font: inherit;
+  font-size: 13.5px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%238593a6' d='M6 8L0 0h12z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: .15s;
+}
+.filter-select:hover{ border-color: #3a4859; }
+.filter-select:focus{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(224,164,88,.12);
+}
+.filter-select option{
+  background: var(--bg2);
+  color: var(--text);
+  padding: 8px;
+}
+
 @media (max-width:640px){
   .rel-edit-row{ grid-template-columns:1fr 1fr !important; }
 }
@@ -968,13 +1018,24 @@
 
 <main>
   <section id="tab-cards" class="tab active">
-    <div class="toolbar">
-      <input id="search" placeholder="Поиск: имя, роль, тег…">
-      <div class="chips" id="factions"></div>
-      <div class="chips" id="countryFilter"></div>
-      <div class="chips" id="bornIntoFilter"></div>
-      <button class="btn-add" id="btnAddChar" hidden>+ Персонаж</button>
-    </div>
+<div class="toolbar">
+  <input id="search" placeholder="Поиск: имя, роль, тег…">
+  <button class="btn-add" id="btnAddChar" hidden>+ Персонаж</button>
+</div>
+<div class="toolbar filters-row">
+  <div class="filter-group">
+    <label>Клан</label>
+    <select id="factions" class="filter-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Род</label>
+    <select id="bornIntoFilter" class="filter-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Страна</label>
+    <div class="chips" id="countryFilter"></div>
+  </div>
+</div>
     <div class="grid" id="cardGrid"></div>
   </section>
 
@@ -1671,15 +1732,31 @@ function renderAll(){
 }
 
 /* ---------- фракции ---------- */
-function renderFactions(){  
-    const list = ['Все', ...new Set(DB.characters.map(c => clanName(c)).filter(Boolean))];
-  if (!list.includes(activeFaction)) activeFaction = 'Все';
-  $('#factions').innerHTML = list.map(f =>
-    `<div class="chip ${f === activeFaction ? 'on' : ''}" data-f="${esc(f)}">${esc(f)}</div>`
-  ).join('');
-  $$('#factions .chip').forEach(ch => ch.onclick = () => {
-    activeFaction = ch.dataset.f; renderFactions(); renderCards();
+function renderFactions(){
+  const sel = $('#factions');
+  if (!sel) return;
+
+  const used = new Set();
+  DB.characters.forEach(c => {
+    if (c.faction) used.add(clanName(c));
   });
+
+  const sorted = [...used].sort((a, b) => a.localeCompare(b, 'ru'));
+  if (activeFaction !== 'Все' && !sorted.includes(activeFaction)){
+    activeFaction = 'Все';
+  }
+
+  sel.innerHTML = `
+    <option value="Все">Все кланы (${sorted.length})</option>
+    ${sorted.map(name =>
+      `<option value="${esc(name)}" ${name === activeFaction ? 'selected' : ''}>${esc(name)}</option>`
+    ).join('')}
+  `;
+
+  sel.onchange = e => {
+    activeFaction = e.target.value;
+    renderCards();
+  };
 }
 
 /* ---------- фильтр стран ---------- */
@@ -1703,33 +1780,38 @@ function renderCountries(){
 
 /* ---------- фильтр родного клана ---------- */
 function renderBornIntoFilter(){
+  const sel = $('#bornIntoFilter');
+  if (!sel) return;
+
   const used = [...new Set(DB.characters.map(c => c.bornInto).filter(Boolean))];
-  if (!used.length){ $('#bornIntoFilter').innerHTML = ''; return; }
-  const ordered = (DB.families || []).filter(f => used.includes(f.id));
 
-  /* "Все" + каждая семья, у которой есть хоть один рождённый в ней */
-  const list = [{ id: 'Все', name: 'Все роды', color: null }];
-  ordered.forEach(f => list.push({ id: f.id, name: f.name, color: f.color }));
-  /* персонажи с bornInto, но без семьи в списке families */
+  /* собираем список: сначала из families, потом «сироты» — те, у кого bornInto есть, а семьи нет */
+  const items = [];
+  (DB.families || []).forEach(f => {
+    if (used.includes(f.id)) items.push({ id: f.id, name: f.name });
+  });
   used.forEach(id => {
-    if (!ordered.some(f => f.id === id)){
-      list.push({ id, name: id, color: '#8b98ab' });
-    }
+    if (!items.some(x => x.id === id)) items.push({ id, name: id });
   });
+  items.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
 
-  if (!list.some(x => x.id === activeBornInto)) activeBornInto = 'Все';
+  /* если активный род больше не используется — сбрасываем */
+  const validIds = items.map(x => x.id);
+  if (activeBornInto !== 'Все' && !validIds.includes(activeBornInto)){
+    activeBornInto = 'Все';
+  }
 
-  $('#bornIntoFilter').innerHTML = list.map(item => {
-    const on = item.id === activeBornInto;
-    const style = item.color ? `background:${item.color};border-color:${item.color};color:${textOnColor(item.color)}` : '';
-    return `<div class="chip ${on ? 'on' : ''}" data-b="${esc(item.id)}" style="${on ? style : ''}">${esc(item.name)}</div>`;
-  }).join('');
+  sel.innerHTML = `
+    <option value="Все">Все роды (${items.length})</option>
+    ${items.map(item =>
+      `<option value="${esc(item.id)}" ${item.id === activeBornInto ? 'selected' : ''}>${esc(item.name)}</option>`
+    ).join('')}
+  `;
 
-  $$('#bornIntoFilter .chip').forEach(ch => ch.onclick = () => {
-    activeBornInto = ch.dataset.b;
-    renderBornIntoFilter();
+  sel.onchange = e => {
+    activeBornInto = e.target.value;
     renderCards();
-  });
+  };
 }
 
 /* ---------- карточки ---------- */
@@ -3480,6 +3562,140 @@ function orderClustersByConnection(clusters){
 }
 
 /* ============================================================
+   Классическая иерархическая раскладка кластера
+   ============================================================ */
+function computeClusterLayout(cluster, gen, spouseOf, COL_W){
+  const members = cluster.members;
+  const memberIds = new Set(members.map(m => m.id));
+  const memberById = {};
+  members.forEach(m => memberById[m.id] = m);
+
+  /* дети и родители внутри кластера */
+  const parentsOf = {};
+  members.forEach(m => parentsOf[m.id] = []);
+  DB.relations.forEach(r => {
+    if (r.t === 'родитель' && memberIds.has(r.a) && memberIds.has(r.b)){
+      parentsOf[r.b].push(r.a);
+    }
+  });
+
+  /* юнит = человек + его супруг в том же кластере */
+  const unitKey = id => {
+    const sp = spouseOf[id];
+    if (sp && memberIds.has(sp)){
+      return [id, sp].sort().join('|');
+    }
+    return id;
+  };
+  const unitMembers = uk => uk.split('|').filter(id => memberById[id]);
+
+  const allUnits = new Set();
+  members.forEach(m => allUnits.add(unitKey(m.id)));
+
+  /* юнит → дети-юниты (первый родитель определяет, куда попадёт ребёнок) */
+  const unitChildren = {};
+  const unitParents = {};
+  allUnits.forEach(uk => { unitChildren[uk] = []; unitParents[uk] = []; });
+
+  members.forEach(m => {
+    const pids = parentsOf[m.id];
+    if (!pids.length) return;
+    const parentUnit = unitKey(pids[0]);
+    const childUnit  = unitKey(m.id);
+    if (parentUnit === childUnit) return;
+    if (!unitChildren[parentUnit].includes(childUnit)) unitChildren[parentUnit].push(childUnit);
+    if (!unitParents[childUnit].includes(parentUnit)) unitParents[childUnit].push(parentUnit);
+  });
+
+  /* корни кластера */
+  const roots = [...allUnits].filter(uk => unitParents[uk].length === 0);
+
+  const unitName = uk => {
+    const ids = unitMembers(uk);
+    const names = ids.map(id => memberById[id]?.name || '').sort();
+    return names[0] || '';
+  };
+  roots.sort((a, b) => unitName(a).localeCompare(unitName(b), 'ru'));
+  Object.values(unitChildren).forEach(arr => {
+    arr.sort((a, b) => unitName(a).localeCompare(unitName(b), 'ru'));
+  });
+
+  /* ширина поддерева */
+  const SIBLING_GAP = 40;
+  const ROOT_GAP = 80;
+  const subW = {};
+  const visiting = new Set();
+
+  function calcW(uk){
+    if (subW[uk] != null) return subW[uk];
+    if (visiting.has(uk)) return COL_W;
+    visiting.add(uk);
+    const unitW = COL_W * unitMembers(uk).length;
+    const kids = unitChildren[uk] || [];
+    if (!kids.length){
+      subW[uk] = unitW;
+    } else {
+      let kidsW = 0;
+      kids.forEach(k => { kidsW += calcW(k); });
+      kidsW += (kids.length - 1) * SIBLING_GAP;
+      subW[uk] = Math.max(unitW, kidsW);
+    }
+    visiting.delete(uk);
+    return subW[uk];
+  }
+  roots.forEach(r => calcW(r));
+
+  /* размещение */
+  const posX = {};
+  function place(uk, left){
+    const um = unitMembers(uk);
+    const unitW = COL_W * um.length;
+    const sw = subW[uk];
+    const kids = unitChildren[uk] || [];
+
+    /* нет детей — просто центрируем юнит в своей доле */
+    if (!kids.length){
+      const center = left + sw / 2;
+      const unitStart = center - unitW / 2;
+      um.forEach((mid, i) => {
+        posX[mid] = unitStart + COL_W / 2 + i * COL_W;
+      });
+      return;
+    }
+
+    /* сначала размещаем детей, запоминая их реальные X-центры */
+    let kidsW = 0;
+    kids.forEach(k => { kidsW += subW[k]; });
+    kidsW += (kids.length - 1) * SIBLING_GAP;
+
+    let childLeft = left + (sw - kidsW) / 2;
+    const childCenters = [];
+    kids.forEach(k => {
+      place(k, childLeft);
+      const km = unitMembers(k);
+      const center = km.reduce((a, id) => a + posX[id], 0) / km.length;
+      childCenters.push(center);
+      childLeft += subW[k] + SIBLING_GAP;
+    });
+
+    /* родитель центрируется над средним X своих детей */
+    const parentCenter = childCenters.reduce((a, b) => a + b, 0) / childCenters.length;
+    const unitStart = parentCenter - unitW / 2;
+    um.forEach((mid, i) => {
+      posX[mid] = unitStart + COL_W / 2 + i * COL_W;
+    });
+  }
+
+  let cursor = 0;
+  roots.forEach(uk => {
+    place(uk, cursor);
+    cursor += subW[uk] + ROOT_GAP;
+  });
+
+  return { posX, width: Math.max(320, cursor - ROOT_GAP) };
+}
+
+/* ============================================================
    Древо: единая отрисовка с глобальными поколениями
    ============================================================ */
 function renderTree(){
@@ -3540,26 +3756,10 @@ function renderTree(){
     spouseOf[r.a] = r.b; spouseOf[r.b] = r.a;
   });
 
-  ordered.forEach(cluster => {
-    const byGen = {};
-    cluster.members.forEach(m => {
-      const g = gen[m.id] ?? 0;
-      (byGen[g] = byGen[g] || []).push(m);
-    });
-    Object.values(byGen).forEach(arr => {
-      arr.sort((a,b) => a.name.localeCompare(b.name, 'ru'));
-      const sorted = [], used = new Set();
-      arr.forEach(m => {
-        if (used.has(m.id)) return;
-        sorted.push(m); used.add(m.id);
-        const partner = arr.find(x => x.id === spouseOf[m.id]);
-        if (partner && !used.has(partner.id)){ sorted.push(partner); used.add(partner.id); }
-      });
-      arr.length = 0; arr.push(...sorted);
-    });
-    const maxCols = Math.max(...Object.values(byGen).map(a => a.length), 1);
-    cluster.byGen = byGen;
-    cluster.width = Math.max(320, maxCols * COL_W + PAD * 2);
+      ordered.forEach(cluster => {
+    const layout = computeClusterLayout(cluster, gen, spouseOf, COL_W);
+    cluster.layout = layout;
+    cluster.width = layout.width;
   });
 
   const totalW = ordered.reduce((s, c) => s + c.width, 0) + GAP * (ordered.length + 1);
@@ -3582,24 +3782,23 @@ function renderTree(){
     labelEl.innerHTML = `<span class="fam-badge" style="--fc:${esc(cluster.color)};color:${textCol}">${esc(cluster.name)}</span>`;
     inner.appendChild(labelEl);
 
-    /* узлы */
-    Object.entries(cluster.byGen).forEach(([g, arr]) => {
-      const gN = +g - minGen;
-      const startX = xOff + (cluster.width - arr.length * COL_W) / 2 + COL_W / 2;
-      arr.forEach((m, i) => {
-        const x = startX + i * COL_W;
-        const y = PAD + LABEL_TOP + gN * ROW_H + NODE_H;
-        allPos[m.id] = { x, y };
+    /* узлы — X из layout.posX, Y из глобального поколения */
+    cluster.members.forEach(m => {
+      const localX = cluster.layout.posX[m.id];
+      if (localX == null) return;
+      const x = xOff + localX;
+      const gN = (gen[m.id] ?? 0) - minGen;
+      const y = PAD + LABEL_TOP + gN * ROW_H + NODE_H;
+      allPos[m.id] = { x, y };
 
-        const isMatched = !cluster.matched || cluster.matched.has(m.id);
-        const el = document.createElement('div');
-        el.className = 'tree-node' + (!isMatched ? ' muted' : '');
-        el.style.left = x + 'px';
-        el.style.top = y + 'px';
-        el.innerHTML = avatarHTML(m, '', bloodColor(m)) + `<div class="tn-name">${esc(m.name)}</div>`;
-        el.onclick = () => openChar(m.id);
-        inner.appendChild(el);
-      });
+      const isMatched = !cluster.matched || cluster.matched.has(m.id);
+      const el = document.createElement('div');
+      el.className = 'tree-node' + (!isMatched ? ' muted' : '');
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+      el.innerHTML = avatarHTML(m, '', bloodColor(m)) + `<div class="tn-name">${esc(m.name)}</div>`;
+      el.onclick = () => openChar(m.id);
+      inner.appendChild(el);
     });
 
     xOff += cluster.width + GAP;
