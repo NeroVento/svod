@@ -972,6 +972,7 @@
       <input id="search" placeholder="Поиск: имя, роль, тег…">
       <div class="chips" id="factions"></div>
       <div class="chips" id="countryFilter"></div>
+      <div class="chips" id="bornIntoFilter"></div>
       <button class="btn-add" id="btnAddChar" hidden>+ Персонаж</button>
     </div>
     <div class="grid" id="cardGrid"></div>
@@ -1413,6 +1414,7 @@ let editMode = false;
 let draftExists = false;
 let activeFaction = 'Все';
 let activeCountry = 'Все';
+let activeBornInto = 'Все';
 let llMode = 'events';
 const LL_WIDTH_KEY = 'svod_ll_label_w';
 let compareIds = new Set();
@@ -1659,6 +1661,7 @@ $$("nav.tabs button").forEach(btn => {
 function renderAll(){
   renderFactions();
   renderCountries();
+  renderBornIntoFilter();
   renderCards();
   renderLocCountries();
   renderLocations();
@@ -1698,12 +1701,44 @@ function renderCountries(){
   });
 }
 
+/* ---------- фильтр родного клана ---------- */
+function renderBornIntoFilter(){
+  const used = [...new Set(DB.characters.map(c => c.bornInto).filter(Boolean))];
+  if (!used.length){ $('#bornIntoFilter').innerHTML = ''; return; }
+  const ordered = (DB.families || []).filter(f => used.includes(f.id));
+
+  /* "Все" + каждая семья, у которой есть хоть один рождённый в ней */
+  const list = [{ id: 'Все', name: 'Все роды', color: null }];
+  ordered.forEach(f => list.push({ id: f.id, name: f.name, color: f.color }));
+  /* персонажи с bornInto, но без семьи в списке families */
+  used.forEach(id => {
+    if (!ordered.some(f => f.id === id)){
+      list.push({ id, name: id, color: '#8b98ab' });
+    }
+  });
+
+  if (!list.some(x => x.id === activeBornInto)) activeBornInto = 'Все';
+
+  $('#bornIntoFilter').innerHTML = list.map(item => {
+    const on = item.id === activeBornInto;
+    const style = item.color ? `background:${item.color};border-color:${item.color};color:${textOnColor(item.color)}` : '';
+    return `<div class="chip ${on ? 'on' : ''}" data-b="${esc(item.id)}" style="${on ? style : ''}">${esc(item.name)}</div>`;
+  }).join('');
+
+  $$('#bornIntoFilter .chip').forEach(ch => ch.onclick = () => {
+    activeBornInto = ch.dataset.b;
+    renderBornIntoFilter();
+    renderCards();
+  });
+}
+
 /* ---------- карточки ---------- */
 function renderCards(){
   const q = $('#search').value.trim().toLowerCase();
   const list = DB.characters.filter(c => {
-        if (activeFaction !== 'Все' && clanName(c) !== activeFaction) return false;
+    if (activeFaction !== 'Все' && clanName(c) !== activeFaction) return false;
     if (activeCountry !== 'Все' && !(c.countries || []).includes(activeCountry)) return false;
+    if (activeBornInto !== 'Все' && c.bornInto !== activeBornInto) return false;
     if (!q) return true;
     return (c.name || '').toLowerCase().includes(q);
   });
