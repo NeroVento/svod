@@ -2,7 +2,7 @@
   "meta": {
     "title": "Новоушино и все-все-все",
     "subtitle": "Оставь одежду всяк сюда входящий",
-    "currentYear": 63
+    "currentYear": 51
   },
   "countries": {
     "jp": {
@@ -1170,7 +1170,7 @@
     {
       "id": "cmv4fu1jphri2",
       "name": "Ушиджима Джельсомино",
-      "alias": "Соле, Мино",
+      "alias": "Соле, Мино, Джель",
       "gender": "м",
       "generation": null,
       "faction": "ushijima",
@@ -1194,6 +1194,175 @@
       "secret": "",
       "photo": "",
       "born": 74,
+      "died": null
+    },
+    {
+      "id": "cmv5slije8jst",
+      "name": "Ушиджима Адзами",
+      "alias": "Ами, Фасоль (+Ходзу), Зяма",
+      "gender": "м",
+      "generation": 2,
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Меткость": 10,
+        "Словарный запас": 2,
+        "Спокойствие (с возрастом)": 8,
+        "Надежность": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 51,
+      "died": null
+    },
+    {
+      "id": "cmv5swr5dk7t0",
+      "name": "Ушиджима Ходзуки",
+      "alias": "Ходзу, Фасоль Адзуки (+Ами), Зюма",
+      "gender": "м",
+      "generation": 2,
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Танковость": 10,
+        "Энергия": 10,
+        "Драчки с Реном": 10,
+        "Подначки Ами": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 51,
+      "died": null
+    },
+    {
+      "id": "cmv5tfmhmubsn",
+      "name": "Ушиджима Алессандро",
+      "alias": "Саня",
+      "gender": "м",
+      "generation": null,
+      "faction": "ushijima",
+      "bornInto": "jinguji",
+      "countries": [
+        "jp",
+        "it"
+      ],
+      "role": "Бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Семейная опора": 10,
+        "Лепесток сакуры": 10,
+        "Устойчивость к алкоголю": 0,
+        "Пяньчушка": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 39,
+      "died": null
+    },
+    {
+      "id": "cmv5tlr29k1ft",
+      "name": "Ушиджима Ренато",
+      "alias": "Рен, Ренччи",
+      "gender": "м",
+      "generation": null,
+      "faction": "ushijima",
+      "bornInto": "jinguji",
+      "countries": [
+        "jp",
+        "it"
+      ],
+      "role": "Бизнесмен, модель, красавчик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Рыжесть": 10,
+        "Социальный контроль (сплетни)": 9,
+        "Карибские любовники": 1,
+        "Меховость и змейкость": 10,
+        "Итальянская экспрессия": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 42,
+      "died": null
+    },
+    {
+      "id": "cmv5tqlxnogtm",
+      "name": "Ушиджима Леонардо",
+      "alias": "Лео, Зя, Зязечка, Зямочка",
+      "gender": "м",
+      "generation": 3,
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Хозяюшка": 10,
+        "Стайл": 10,
+        "Идеальный ребенок": 10,
+        "Любовь к автосервису": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 70,
+      "died": null
+    },
+    {
+      "id": "cmv5u9gntzqbc",
+      "name": "Ушиджима Джек",
+      "alias": "Дженя, Дже, Джеся",
+      "gender": "м",
+      "generation": 3,
+      "faction": "ushijima",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Автомеханик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Нежни": 8,
+        "Влияние на Зя и Коту": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 70,
       "died": null
     }
   ],
@@ -1764,8 +1933,86 @@
       "label": "Брат"
     },
     {
+      "a": "cmv5tfmhmubsn",
+      "b": "cmv5tlr29k1ft",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
       "a": "cmv4fu1jphri2",
       "b": "cmv4dwi8flzye",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmv5tlr29k1ft",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmv5tfmhmubsn",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzfhizhzx89",
+      "b": "cmv5swr5dk7t0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzf2fs1vpov",
+      "b": "cmv5swr5dk7t0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv5swr5dk7t0",
+      "b": "cmv5tfmhmubsn",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzfhizhzx89",
+      "b": "cmv5slije8jst",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzf2fs1vpov",
+      "b": "cmv5slije8jst",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv5slije8jst",
+      "b": "cmv5tlr29k1ft",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv5slije8jst",
+      "b": "cmv5swr5dk7t0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv5tlr29k1ft",
+      "b": "cmv5tqlxnogtm",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv5slije8jst",
+      "b": "cmv5tqlxnogtm",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv5u9gntzqbc",
+      "b": "cmv5tqlxnogtm",
       "t": "супруг",
       "label": "Муж"
     }
@@ -1800,7 +2047,15 @@
         "cmv30t8wmf2rt",
         "cmv30n8va5klm",
         "cmv31yhop74se",
-        "cmv31v31uco2w"
+        "cmv31v31uco2w",
+        "cmv5slije8jst",
+        "cmv5tfmhmubsn",
+        "cmv5tqlxnogtm",
+        "cmv5u9gntzqbc",
+        "cmv4fp4ilorei",
+        "cmv4dwi8flzye",
+        "cmv4fu1jphri2",
+        "cmv5tlr29k1ft"
       ],
       "secret": ""
     }
