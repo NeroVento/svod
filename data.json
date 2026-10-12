@@ -198,7 +198,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": null,
+      "born": 0,
       "died": null,
       "generation": 0
     },
