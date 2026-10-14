@@ -2,7 +2,7 @@
   "meta": {
     "title": "Новоушино и все-все-все",
     "subtitle": "Оставь одежду всяк сюда входящий",
-    "currentYear": 51
+    "currentYear": 23
   },
   "countries": {
     "jp": {
@@ -1082,11 +1082,12 @@
       "quote": "",
       "traits": {
         "Усики": 10,
-        "Курячий смех": 10
+        "Курячий смех": 10,
+        "Ояояоя": 10
       },
       "secret": "",
       "photo": "",
-      "born": 0,
+      "born": null,
       "died": null
     },
     {
@@ -1363,6 +1364,217 @@
       "secret": "",
       "photo": "",
       "born": 70,
+      "died": null
+    },
+    {
+      "id": "cmv8khctemlqu",
+      "name": "Бокуто Котаро",
+      "alias": "Бокуто-сан",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "ХЭЙХЭЙХЭЙ": 10,
+        "Ояоя": 10,
+        "Сова": 10,
+        "АКАААШИ": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmv8klbl5mhhx",
+      "name": "Бокуто Кейджи",
+      "alias": "Акааши, Кей-сан",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Лицо усталой матери": 10,
+        "Оя": 10,
+        "Бокуто-сан, яметэ кудасай": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 1,
+      "died": null
+    },
+    {
+      "id": "cmv8koa9r8lra",
+      "name": "Мацукава Асаказе",
+      "alias": "Аса",
+      "gender": "м",
+      "generation": null,
+      "faction": "matsukawa",
+      "bornInto": "matsukawa",
+      "countries": [
+        "jp"
+      ],
+      "role": "Мангака",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Любовь к мороженому": 10,
+        "Глазки": 10,
+        "Нежни": 7,
+        "Кудри": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 23,
+      "died": null
+    },
+    {
+      "id": "cmv8ktuj1p12w",
+      "name": "Бокуто Такехико",
+      "alias": "Хико",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "matsukawa",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Нежни": 10,
+        "Любовь к бэдбоям": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 25,
+      "died": null
+    },
+    {
+      "id": "cmv8kwomvlrcp",
+      "name": "Бокуто Хидэки",
+      "alias": "Хидэ",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Бэдбой": 8,
+        "Любовь к нежным принцам": 10,
+        "Простодушие": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 24,
+      "died": null
+    },
+    {
+      "id": "cmv8kzxi9sm1i",
+      "name": "Бокуто Катсуки",
+      "alias": "Катсу",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 24,
+      "died": null
+    },
+    {
+      "id": "cmv8l4ldewyxs",
+      "name": "Бокуто Харуки",
+      "alias": "Хару",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "Ученый, химик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Дипломатия": 8,
+        "Хорошковость": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 24,
+      "died": null
+    },
+    {
+      "id": "cmv8l7sga8ef0",
+      "name": "Мацукава Эйта",
+      "alias": "Эйта-сан",
+      "gender": "м",
+      "generation": null,
+      "faction": "matsukawa",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Преподаватель, сценарист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Беленькость": 10,
+        "Цундере-вайб": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 13,
       "died": null
     }
   ],
@@ -1717,12 +1929,6 @@
       "label": "Брат"
     },
     {
-      "a": "cmv31v31uco2w",
-      "b": "cmv31yhop74se",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
       "a": "cmuymve45bjgp",
       "b": "cmv2urgg38u9d",
       "t": "родитель",
@@ -2013,6 +2219,114 @@
     {
       "a": "cmv5u9gntzqbc",
       "b": "cmv5tqlxnogtm",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31yhop74se",
+      "b": "cmv31v31uco2w",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv8klbl5mhhx",
+      "b": "cmv8khctemlqu",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv30t8wmf2rt",
+      "b": "cmv8koa9r8lra",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv30n8va5klm",
+      "b": "cmv8koa9r8lra",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv30t8wmf2rt",
+      "b": "cmv8ktuj1p12w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv30n8va5klm",
+      "b": "cmv8ktuj1p12w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8ktuj1p12w",
+      "b": "cmv8koa9r8lra",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv8khctemlqu",
+      "b": "cmv8kwomvlrcp",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8klbl5mhhx",
+      "b": "cmv8kwomvlrcp",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8kwomvlrcp",
+      "b": "cmv8ktuj1p12w",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv8khctemlqu",
+      "b": "cmv8kzxi9sm1i",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8klbl5mhhx",
+      "b": "cmv8kzxi9sm1i",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8kzxi9sm1i",
+      "b": "cmv8kwomvlrcp",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv8khctemlqu",
+      "b": "cmv8l4ldewyxs",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8klbl5mhhx",
+      "b": "cmv8l4ldewyxs",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8l4ldewyxs",
+      "b": "cmv8kwomvlrcp",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv8l4ldewyxs",
+      "b": "cmv8kzxi9sm1i",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv8l7sga8ef0",
+      "b": "cmv8koa9r8lra",
       "t": "супруг",
       "label": "Муж"
     }
