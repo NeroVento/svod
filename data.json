@@ -1692,7 +1692,7 @@
       "alias": "",
       "gender": "м",
       "generation": null,
-      "faction": "",
+      "faction": "madarame",
       "bornInto": "sawamura",
       "countries": [
         "jp"
@@ -1719,7 +1719,7 @@
       "alias": "Сой, Соечка, Сойка",
       "gender": "м",
       "generation": null,
-      "faction": "",
+      "faction": "madarame",
       "bornInto": "",
       "countries": [
         "jp"
@@ -1746,8 +1746,8 @@
       "alias": "",
       "gender": "м",
       "generation": null,
-      "faction": "",
-      "bornInto": "",
+      "faction": "madarame",
+      "bornInto": "madarame",
       "countries": [
         "jp"
       ],
@@ -1773,8 +1773,8 @@
       "alias": "Тора",
       "gender": "м",
       "generation": null,
-      "faction": "",
-      "bornInto": "",
+      "faction": "madarame",
+      "bornInto": "madarame",
       "countries": [
         "jp"
       ],
@@ -1792,6 +1792,34 @@
       "secret": "",
       "photo": "",
       "born": 37,
+      "died": null
+    },
+    {
+      "id": "cmva1x3wc2zya",
+      "name": "Мадарамэ Кай",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "madarame",
+      "bornInto": "madarame",
+      "countries": [
+        "jp"
+      ],
+      "role": "Рок-музыкант, фронтмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Лонгачероне": 10,
+        "Андерфая": 10,
+        "Кошатник": 10,
+        "Крепкость (в репках)": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
       "died": null
     }
   ],
@@ -2608,10 +2636,10 @@
       "label": "Сестра"
     },
     {
-      "a": "cmva0vgbdthy6",
-      "b": "cmva0p6awtyrk",
-      "t": "супруг",
-      "label": "Муж"
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
     },
     {
       "a": "cmva0zcvmrl1z",
@@ -2624,6 +2652,18 @@
       "b": "cmva0p6awtyrk",
       "t": "брат",
       "label": "Брат"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0vgbdthy6",
+      "b": "cmva0p6awtyrk",
+      "t": "супруг",
+      "label": "Муж"
     }
   ],
   "locations": [
@@ -2664,7 +2704,21 @@
         "cmv4fp4ilorei",
         "cmv4dwi8flzye",
         "cmv4fu1jphri2",
-        "cmv5tlr29k1ft"
+        "cmv5tlr29k1ft",
+        "cmv8kzxi9sm1i",
+        "cmv8klbl5mhhx",
+        "cmv8khctemlqu",
+        "cmv8ktuj1p12w",
+        "cmv8l4ldewyxs",
+        "cmv8kwomvlrcp",
+        "cmva0fj1slhso",
+        "cmva0i3m1y1ew",
+        "cmva0vgbdthy6",
+        "cmva0p6awtyrk",
+        "cmva0zcvmrl1z",
+        "cmv9zn6poh4sl",
+        "cmva0bhiivio9",
+        "cmv9zowjt0hno"
       ],
       "secret": ""
     }
