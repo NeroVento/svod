@@ -2,7 +2,7 @@
   "meta": {
     "title": "Новоушино и все-все-все",
     "subtitle": "Оставь одежду всяк сюда входящий",
-    "currentYear": 23
+    "currentYear": 40
   },
   "countries": {
     "jp": {
@@ -143,6 +143,11 @@
       "id": "tewan",
       "name": "Тэваны",
       "color": "#DAA520"
+    }
+    {
+      "id": "madarame",
+      "name": "Мадарамэ",
+      "color": "#6A5ACD"
     }
   ],
   "characters": [
@@ -1576,6 +1581,218 @@
       "photo": "",
       "born": 13,
       "died": null
+    },
+    {
+      "id": "cmv9zn6poh4sl",
+      "name": "Савамура Даичи",
+      "alias": "Даи-сан",
+      "gender": "м",
+      "generation": null,
+      "faction": "sawamura",
+      "bornInto": "sawamura",
+      "countries": [
+        "jp"
+      ],
+      "role": "Полицейский",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Бедричи": 10,
+        "Жуткий взгляд": 10,
+        "СУГА": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmv9zowjt0hno",
+      "name": "Савамура Коши",
+      "alias": "Суга",
+      "gender": "м",
+      "generation": null,
+      "faction": "sawamura",
+      "bornInto": "sawamura",
+      "countries": [
+        "jp"
+      ],
+      "role": "Воспитатель в детском саду",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Дружба с сицилийской мафией": 10,
+        "Дразнение Даичи": 10,
+        "Мистер Бодрячок": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmva0bhiivio9",
+      "name": "Савамура Дайки",
+      "alias": "Дай-сан",
+      "gender": "м",
+      "generation": null,
+      "faction": "sawamura",
+      "bornInto": "sawamura",
+      "countries": [
+        "jp"
+      ],
+      "role": "Кондитер-бизнесмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Клубничка": 10,
+        "Разлучник": 10,
+        "Шуга Дэдди": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 22,
+      "died": null
+    },
+    {
+      "id": "cmva0fj1slhso",
+      "name": "Кагеяма Сузумэ",
+      "alias": "Сузу",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "sawamura",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": null,
+      "died": null
+    },
+    {
+      "id": "cmva0i3m1y1ew",
+      "name": "Мадарамэ Айсо",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "sawamura",
+      "countries": [
+        "jp"
+      ],
+      "role": "Тату-мастер",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Нежни": 10,
+        "Трогательни": 10,
+        "Фиалка": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
+      "died": null
+    },
+    {
+      "id": "cmva0p6awtyrk",
+      "name": "Мадарамэ Соичиро",
+      "alias": "Сой, Соечка, Сойка",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Строгость": 7,
+        "Нёрд-стайл": 7,
+        "Вход в колею": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 30,
+      "died": null
+    },
+    {
+      "id": "cmva0vgbdthy6",
+      "name": "Мадарамэ Мики",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Вхождение в колею": 10,
+        "Старший братик": 10,
+        "Открытость": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 32,
+      "died": null
+    },
+    {
+      "id": "cmva0zcvmrl1z",
+      "name": "Мадарамэ Такетора",
+      "alias": "Тора",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Рок-музыкант, фронтмен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Зажигалка": 10,
+        "Мужнин тигр": 10,
+        "Бревнышко": 6
+      },
+      "secret": "",
+      "photo": "",
+      "born": 37,
+      "died": null
     }
   ],
   "events": [],
@@ -2329,6 +2546,84 @@
       "b": "cmv8koa9r8lra",
       "t": "супруг",
       "label": "Муж"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmv9zn6poh4sl",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0bhiivio9",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0bhiivio9",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0fj1slhso",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0fj1slhso",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0fj1slhso",
+      "b": "cmva0bhiivio9",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva0bhiivio9",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva0fj1slhso",
+      "t": "брат",
+      "label": "Сестра"
+    },
+    {
+      "a": "cmva0vgbdthy6",
+      "b": "cmva0p6awtyrk",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmva0i3m1y1ew",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmva0p6awtyrk",
+      "t": "брат",
+      "label": "Брат"
     }
   ],
   "locations": [
