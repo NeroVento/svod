@@ -130,6 +130,11 @@
       "color": "#228B22"
     },
     {
+      "id": "richard",
+      "name": "Ришары",
+      "color": "#FFE4E1"
+    },
+    {
       "id": "aldobrandini",
       "name": "Альдобрандини",
       "color": "#F08080"
@@ -1821,6 +1826,303 @@
       "photo": "",
       "born": null,
       "died": null
+    },
+    {
+      "id": "cmvcqnoutbkup",
+      "name": "Тэван Джунсо",
+      "alias": "Батя",
+      "gender": "м",
+      "generation": 1,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Король Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Демократичность": 8,
+        "Чувство юмора": 10,
+        "Политика": 10,
+        "Секс": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 36,
+      "died": null
+    },
+    {
+      "id": "cmvcqrcctfk74",
+      "name": "Тэван Орландо",
+      "alias": "",
+      "gender": "м",
+      "generation": 1,
+      "faction": "tewan",
+      "bornInto": "",
+      "countries": [
+        "kr",
+        "it"
+      ],
+      "role": "Король-консорт Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Обаяние": 8,
+        "Независимость": 8,
+        "Ниночколюбие": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 36,
+      "died": null
+    },
+    {
+      "id": "cmvcr04hge75g",
+      "name": "Тэван Сора",
+      "alias": "",
+      "gender": "м",
+      "generation": 2,
+      "faction": "tewan",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "kr"
+      ],
+      "role": "Принц-консорт Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 9,
+        "Трудолюбие": 10,
+        "Ответственность": 10,
+        "Нарывчатость": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 59,
+      "died": null
+    },
+    {
+      "id": "cmvcr3gnfk337",
+      "name": "Тэван Ли Ён",
+      "alias": "Лисён, Ён",
+      "gender": "м",
+      "generation": 2,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Наследный принц Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Упрямство": 10,
+        "Желание выпороть Коту": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 59,
+      "died": null
+    },
+    {
+      "id": "cmvcr7heb9e3t",
+      "name": "Тэван Со Ён",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Наследный принц Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Хитрость": 8,
+        "Милосердие": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 86,
+      "died": null
+    },
+    {
+      "id": "cmvcrcpdms66v",
+      "name": "Тэван Амато",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Принц Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Читуня": 10,
+        "Хитрость": 10,
+        "Обаяние": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 57,
+      "died": null
+    },
+    {
+      "id": "cmvcrfjaaxkdo",
+      "name": "Ивайзуми Ацуи",
+      "alias": "Цуй",
+      "gender": "м",
+      "generation": null,
+      "faction": "iwaizumi",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Шеф ЦУ МВД",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Тактильность": 10,
+        "Хитрость": 8,
+        "Крокодиловы слезки": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 37,
+      "died": null
+    },
+    {
+      "id": "cmvcrotdlinig",
+      "name": "Бокуто Ирис",
+      "alias": "",
+      "gender": "ж",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "Конь",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Совособлазнение": 10,
+        "Ржач": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 33,
+      "died": null
+    },
+    {
+      "id": "cmvcrrvyoykza",
+      "name": "Бокуто Юдзуру",
+      "alias": "Юдзу",
+      "gender": "м",
+      "generation": null,
+      "faction": "bokuto",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Соволюбовь": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 41,
+      "died": null
+    },
+    {
+      "id": "cmvcrumwnbmtf",
+      "name": "Ивайзуми Айиро",
+      "alias": "Ай",
+      "gender": "м",
+      "generation": null,
+      "faction": "iwaizumi",
+      "bornInto": "bokuto",
+      "countries": [
+        "jp"
+      ],
+      "role": "Похлопыватель",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Похлопывания мужа": 10,
+        "Кулинария": 10,
+        "Прекрасные очи": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 39,
+      "died": null
+    },
+    {
+      "id": "cmvcs0gonj29u",
+      "name": "Дзингудзи Луиза",
+      "alias": "",
+      "gender": "ж",
+      "generation": 0,
+      "faction": "jinguji",
+      "bornInto": "jinguji",
+      "countries": [
+        "it"
+      ],
+      "role": "Бизнес-вумен",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Рыжесть": 10,
+        "Громогласие": 8
+      },
+      "secret": "",
+      "photo": "",
+      "born": 18,
+      "died": null
     }
   ],
   "events": [],
@@ -2664,6 +2966,210 @@
       "b": "cmva0p6awtyrk",
       "t": "супруг",
       "label": "Муж"
+    },
+    {
+      "a": "cmuzf2fs1vpov",
+      "b": "cmvcr04hge75g",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzfhizhzx89",
+      "b": "cmvcr04hge75g",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcr04hge75g",
+      "b": "cmv5slije8jst",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcr04hge75g",
+      "b": "cmv5swr5dk7t0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcr3gnfk337",
+      "b": "cmvcr04hge75g",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvcr3gnfk337",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvcr3gnfk337",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvcqnoutbkup",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcr04hge75g",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcr3gnfk337",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrcpdms66v",
+      "b": "cmv4f11c22l10",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvcrcpdms66v",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvcrcpdms66v",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrcpdms66v",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmvcrfjaaxkdo",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv31yhop74se",
+      "b": "cmvcrfjaaxkdo",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrotdlinig",
+      "b": "cmv8kzxi9sm1i",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmvcrotdlinig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv31yhop74se",
+      "b": "cmvcrotdlinig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrotdlinig",
+      "b": "cmvcrfjaaxkdo",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrrvyoykza",
+      "b": "cmv8l4ldewyxs",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv31v31uco2w",
+      "b": "cmvcrrvyoykza",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv31yhop74se",
+      "b": "cmvcrrvyoykza",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrrvyoykza",
+      "b": "cmvcrotdlinig",
+      "t": "брат",
+      "label": "Сестра"
+    },
+    {
+      "a": "cmvcrrvyoykza",
+      "b": "cmvcrfjaaxkdo",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmvcrfjaaxkdo",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv8khctemlqu",
+      "b": "cmvcrumwnbmtf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv8klbl5mhhx",
+      "b": "cmvcrumwnbmtf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmv8kzxi9sm1i",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmv8l4ldewyxs",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmv8kwomvlrcp",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv5tfmhmubsn",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv5tlr29k1ft",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv4fu1jphri2",
+      "t": "родитель",
+      "label": "Мать"
     }
   ],
   "locations": [
