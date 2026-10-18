@@ -2,7 +2,7 @@
   "meta": {
     "title": "Новоушино и все-все-все",
     "subtitle": "Оставь одежду всяк сюда входящий",
-    "currentYear": 40
+    "currentYear": 138
   },
   "countries": {
     "jp": {
@@ -1715,7 +1715,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": null,
+      "born": 37,
       "died": null
     },
     {
@@ -1824,7 +1824,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": null,
+      "born": 59,
       "died": null
     },
     {
@@ -1963,7 +1963,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 86,
+      "born": 84,
       "died": null
     },
     {
@@ -2122,6 +2122,202 @@
       "secret": "",
       "photo": "",
       "born": 18,
+      "died": null
+    },
+    {
+      "id": "cmve9xa4qv9l1",
+      "name": "Каштелу-Бранку Шедар",
+      "alias": "Шери, Шер",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Герцог Каштелу-Бранку",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Мишка Харибо": 5,
+        "Герцог-зануда": 10,
+        "Титульные мутки": 10,
+        "Иммунитет к алкоголю": 0
+      },
+      "secret": "",
+      "photo": "",
+      "born": 67,
+      "died": null
+    },
+    {
+      "id": "cmvea77b8jr22",
+      "name": "Камелот Нави",
+      "alias": "",
+      "gender": "м",
+      "generation": null,
+      "faction": "camelot",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Граф Микк, наследник Камелотов",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Убежавшая родинка": 10,
+        "Планчик на кланчик": 10,
+        "Любовь к чужим шляпам": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 71,
+      "died": null
+    },
+    {
+      "id": "cmveaefhildig",
+      "name": "Ушиджима Арктур",
+      "alias": "Тури",
+      "gender": "м",
+      "generation": null,
+      "faction": "ushijima",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Спортсмен-фехтовальщик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "БЖЖЖЖ": 10,
+        "Воля": 10,
+        "Нарывчатость": 8,
+        "Смелость": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 75,
+      "died": null
+    },
+    {
+      "id": "cmveailtwr4v7",
+      "name": "Камелот Сириус",
+      "alias": "Сири",
+      "gender": "м",
+      "generation": null,
+      "faction": "camelot",
+      "bornInto": "camelot",
+      "countries": [
+        "jp",
+        "pt"
+      ],
+      "role": "Звезда",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 79,
+      "died": null
+    },
+    {
+      "id": "cmvean30r1z4w",
+      "name": "Каштелу-Бранку Руи",
+      "alias": "Руй",
+      "gender": "м",
+      "generation": null,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "pt"
+      ],
+      "role": "Принц Португалии",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Шеролавхейт": 10,
+        "Еее, рок!": 10,
+        "Навилюбие": 10,
+        "Трусы с мишенью": 1
+      },
+      "secret": "",
+      "photo": "",
+      "born": 67,
+      "died": null
+    },
+    {
+      "id": "cmveaqhyd2lxp",
+      "name": "Камелот Джованни",
+      "alias": "Джанни",
+      "gender": "м",
+      "generation": null,
+      "faction": "camelot",
+      "bornInto": "andolini",
+      "countries": [
+        "pt",
+        "it"
+      ],
+      "role": "Телохранитель, бывший мафиозо",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Спокойствие": 8,
+        "Уверенность": 10,
+        "Гардероб шляп": 10,
+        "Темное прошлое": 1
+      },
+      "secret": "",
+      "photo": "",
+      "born": 71,
+      "died": null
+    },
+    {
+      "id": "cmveawk7l7cui",
+      "name": "Перейра Авейру Камелот Динис Хосе",
+      "alias": "Хося",
+      "gender": "",
+      "generation": null,
+      "faction": "camelot",
+      "bornInto": "",
+      "countries": [
+        "pt"
+      ],
+      "role": "Агроном",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Горячесть": 10,
+        "Рыцарь": 10,
+        "Любовь к Ирисам": 10,
+        "Любовь к курникам": 10,
+        "Перепалки с Лу": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 70,
       "died": null
     }
   ],
@@ -2914,52 +3110,10 @@
       "label": "Брат"
     },
     {
-      "a": "cmv9zn6poh4sl",
-      "b": "cmva0i3m1y1ew",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zowjt0hno",
-      "b": "cmva0i3m1y1ew",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
-      "b": "cmva0bhiivio9",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
-      "b": "cmva0fj1slhso",
-      "t": "брат",
-      "label": "Сестра"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
-      "b": "cmva1x3wc2zya",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0zcvmrl1z",
-      "b": "cmva0i3m1y1ew",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
       "a": "cmva0zcvmrl1z",
       "b": "cmva0p6awtyrk",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmva0zcvmrl1z",
-      "b": "cmva1x3wc2zya",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmva0vgbdthy6",
@@ -3014,18 +3168,6 @@
       "b": "cmvcqnoutbkup",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmvcr04hge75g",
-      "b": "cmvcr7heb9e3t",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcr3gnfk337",
-      "b": "cmvcr7heb9e3t",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmvcrcpdms66v",
@@ -3170,6 +3312,168 @@
       "b": "cmv4fu1jphri2",
       "t": "родитель",
       "label": "Мать"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva0bhiivio9",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva0fj1slhso",
+      "t": "брат",
+      "label": "Сестра"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva0zcvmrl1z",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcr04hge75g",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcr3gnfk337",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvea77b8jr22",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmvea77b8jr22",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmv4fp4ilorei",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmvea77b8jr22",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmveaefhildig",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvean30r1z4w",
+      "b": "cmve9xa4qv9l1",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmveaqhyd2lxp",
+      "b": "cmvea77b8jr22",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmveawk7l7cui",
+      "b": "cmveailtwr4v7",
+      "t": "супруг",
+      "label": "Муж"
     }
   ],
   "locations": [
