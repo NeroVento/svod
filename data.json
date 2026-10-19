@@ -2,7 +2,7 @@
   "meta": {
     "title": "Новоушино и все-все-все",
     "subtitle": "Оставь одежду всяк сюда входящий",
-    "currentYear": 138
+    "currentYear": 80
   },
   "countries": {
     "jp": {
@@ -514,12 +514,14 @@
         "Супер Пауру": 10,
         "Иммунитет к лопатке": 0,
         "Лоснивость и тпруканье": 10,
-        "Иммунитет к выкручиванию пупка": 5
+        "Иммунитет к выкручиванию пупка": 5,
+        "Длиннннна": 10
       },
       "secret": "",
       "photo": "",
       "born": 43,
-      "died": null
+      "died": null,
+      "generation": null
     },
     {
       "id": "cmuzj50p0nkg0",
@@ -539,16 +541,17 @@
       "bio": "Характер: нордический, способность снести яйцо: +",
       "quote": "",
       "traits": {
-        "Воля": 10,
-        "Хитрость": 7,
         "Отвага": 10,
         "Ирисовая элегантность": 10,
-        "Иммунитет к Супер Пауру": 0
+        "Иммунитет к Супер Пауру": 0,
+        "Вскрытие бляхи": 10,
+        "Сила особого взгляда": 5
       },
       "secret": "",
       "photo": "",
       "born": 43,
-      "died": null
+      "died": null,
+      "generation": null
     },
     {
       "id": "cmuzjcz1bk3pf",
@@ -2319,6 +2322,118 @@
       "photo": "",
       "born": 70,
       "died": null
+    },
+    {
+      "id": "cmvfre7m7gm7w",
+      "name": "Тэван Чау",
+      "alias": "Чаушка",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Принц Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Жемчужность": 10,
+        "Нежность": 10,
+        "Любовь к коням": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 72,
+      "died": null
+    },
+    {
+      "id": "cmvfroemfgzx0",
+      "name": "Тэван Макото",
+      "alias": "Кота",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "iwaizumi",
+      "countries": [
+        "jp",
+        "kr"
+      ],
+      "role": "Воспитатель в детском саду",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Секс-бомба": 10,
+        "Кудрявость": 10,
+        "Хитросделанность": 10,
+        "Нежни": 6
+      },
+      "secret": "",
+      "photo": "",
+      "born": 70,
+      "died": null
+    },
+    {
+      "id": "cmvfs5j070e0w",
+      "name": "Тэван Рафаэль",
+      "alias": "Рафа, Раф, Рафаэлка",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "tewan",
+      "countries": [
+        "kr"
+      ],
+      "role": "Принц Кореи",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Прошаренность": 10,
+        "Любовь к рафу": 10,
+        "Бесячесть": 10,
+        "Интриги": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 81,
+      "died": null
+    },
+    {
+      "id": "cmvfsa95g2cvf",
+      "name": "Тэван Ян",
+      "alias": "Янчик, Янч",
+      "gender": "м",
+      "generation": null,
+      "faction": "tewan",
+      "bornInto": "kanda",
+      "countries": [
+        "jp",
+        "kr"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Чувствительность": 8,
+        "Скандальность": 8,
+        "Уська (упала)": 0
+      },
+      "secret": "",
+      "photo": "",
+      "born": 78,
+      "died": null
     }
   ],
   "events": [],
@@ -2332,18 +2447,6 @@
     {
       "a": "cmuzin7ne0b28",
       "b": "cmuzfhizhzx89",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmuziwaytfgbr",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmuzjcz1bk3pf",
-      "b": "cmuziwaytfgbr",
       "t": "брат",
       "label": "Брат"
     },
@@ -2394,12 +2497,6 @@
       "b": "cmuzi46i1m8on",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmuyls26p9sy5",
-      "b": "cmuziwaytfgbr",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuyls26p9sy5",
@@ -2418,12 +2515,6 @@
       "b": "cmuzf2fs1vpov",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmuymve45bjgp",
-      "b": "cmuziwaytfgbr",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuymve45bjgp",
@@ -2448,12 +2539,6 @@
       "b": "cmv2uz34q6ugf",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmv2uz34q6ugf",
-      "b": "cmuziwaytfgbr",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv2uz34q6ugf",
@@ -2682,12 +2767,6 @@
       "b": "cmv2urgg38u9d",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmv2urgg38u9d",
-      "b": "cmuziwaytfgbr",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv2urgg38u9d",
@@ -3368,46 +3447,10 @@
       "label": "Отец"
     },
     {
-      "a": "cmuziwaytfgbr",
-      "b": "cmve9xa4qv9l1",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmve9xa4qv9l1",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmvea77b8jr22",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmvea77b8jr22",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmvea77b8jr22",
       "b": "cmve9xa4qv9l1",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmveaefhildig",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmveaefhildig",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmveaefhildig",
@@ -3426,18 +3469,6 @@
       "b": "cmv4fp4ilorei",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmveailtwr4v7",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmveailtwr4v7",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmveailtwr4v7",
@@ -3472,6 +3503,174 @@
     {
       "a": "cmveawk7l7cui",
       "b": "cmveailtwr4v7",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvfre7m7gm7w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvfre7m7gm7w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfre7m7gm7w",
+      "b": "cmvcrcpdms66v",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvfre7m7gm7w",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrfjaaxkdo",
+      "b": "cmvfroemfgzx0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmvfroemfgzx0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfroemfgzx0",
+      "b": "cmvfre7m7gm7w",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvfs5j070e0w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvfs5j070e0w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvcrcpdms66v",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvfre7m7gm7w",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmvfsa95g2cvf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmvfsa95g2cvf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmuzjcz1bk3pf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuyls26p9sy5",
+      "b": "cmuziwaytfgbr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuymve45bjgp",
+      "b": "cmuziwaytfgbr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmv2uz34q6ugf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmv2urgg38u9d",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmuziwaytfgbr",
       "t": "супруг",
       "label": "Муж"
     }
