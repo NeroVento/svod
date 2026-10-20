@@ -1050,6 +1050,30 @@
   font-size: 11.5px;
 }
 
+/* цепочка стран в форме */
+.country-chain-list{
+  display: flex; flex-direction: column; gap: 6px;
+}
+.country-chain-row{
+  display: flex; gap: 8px; align-items: center;
+}
+.country-chain-row select{
+  flex: 1;
+  padding: 9px 12px;
+  background: var(--bg2); border: 1px solid var(--line);
+  color: var(--text); border-radius: 10px;
+  font: inherit; font-size: 14px; outline: none;
+}
+.country-chain-row select:focus{ border-color: var(--accent); }
+.country-chain-del{
+  width: 38px; height: 38px; flex: none;
+  display: grid; place-items: center;
+  background: transparent; border: 1px solid var(--line);
+  color: var(--dim); border-radius: 10px; cursor: pointer;
+  font-size: 16px; padding: 0; transition: .15s;
+}
+.country-chain-del:hover{ color: var(--danger); border-color: var(--danger); }
+
 @media (max-width:640px){
   .rel-edit-row{ grid-template-columns:1fr 1fr !important; }
 }
@@ -1833,19 +1857,32 @@ function renderFactions(){
   if (!sel) return;
 
   const used = new Set();
+  let noFactionCount = 0;
+
   DB.characters.forEach(c => {
-    if (c.faction) used.add(clanName(c));
+    const name = clanName(c);
+    if (name === 'Вне кланов') {
+      noFactionCount++;
+    } else {
+      used.add(name);
+    }
   });
 
   const sorted = [...used].sort((a, b) => a.localeCompare(b, 'ru'));
+  
+  /* Добавляем опцию "Вне кланов", если такие есть */
+  if (noFactionCount > 0) {
+    sorted.push('Вне кланов');
+  }
+
   if (activeFaction !== 'Все' && !sorted.includes(activeFaction)){
     activeFaction = 'Все';
   }
 
   sel.innerHTML = `
-    <option value="Все">Все кланы (${sorted.length})</option>
+    <option value="Все">Все кланы (${DB.characters.length})</option>
     ${sorted.map(name =>
-      `<option value="${esc(name)}" ${name === activeFaction ? 'selected' : ''}>${esc(name)}</option>`
+      `<option value="${esc(name)}" ${name === activeFaction ? 'selected' : ''}>${esc(name)}${name === 'Вне кланов' ? ` (${noFactionCount})` : ''}</option>`
     ).join('')}
   `;
 
@@ -1879,9 +1916,17 @@ function renderBornIntoFilter(){
   const sel = $('#bornIntoFilter');
   if (!sel) return;
 
-  const used = [...new Set(DB.characters.map(c => c.bornInto).filter(Boolean))];
+  const used = [];
+  let noFamilyCount = 0;
 
-  /* собираем список: сначала из families, потом «сироты» — те, у кого bornInto есть, а семьи нет */
+  DB.characters.forEach(c => {
+    if (c.bornInto) {
+      if (!used.includes(c.bornInto)) used.push(c.bornInto);
+    } else {
+      noFamilyCount++;
+    }
+  });
+
   const items = [];
   (DB.families || []).forEach(f => {
     if (used.includes(f.id)) items.push({ id: f.id, name: f.name });
@@ -1891,16 +1936,20 @@ function renderBornIntoFilter(){
   });
   items.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
 
-  /* если активный род больше не используется — сбрасываем */
+  /* Добавляем опцию "Вне семей", если такие есть */
+  if (noFamilyCount > 0) {
+    items.push({ id: '_none_', name: 'Вне семей' });
+  }
+
   const validIds = items.map(x => x.id);
   if (activeBornInto !== 'Все' && !validIds.includes(activeBornInto)){
     activeBornInto = 'Все';
   }
 
   sel.innerHTML = `
-    <option value="Все">Все роды (${items.length})</option>
+    <option value="Все">Все роды (${DB.characters.length})</option>
     ${items.map(item =>
-      `<option value="${esc(item.id)}" ${item.id === activeBornInto ? 'selected' : ''}>${esc(item.name)}</option>`
+      `<option value="${esc(item.id)}" ${item.id === activeBornInto ? 'selected' : ''}>${esc(item.name)}${item.id === '_none_' ? ` (${noFamilyCount})` : ''}</option>`
     ).join('')}
   `;
 
@@ -2003,9 +2052,8 @@ function renderStats(){
     pill.onclick = () => {
       const name = pill.dataset.family;
       if (name === 'Вне семей'){
-        activeBornInto = 'Все';
+        activeBornInto = '_none_'; /* Вот тут меняем на _none_ */
       } else {
-        /* находим id семьи по имени */
         const fam = (DB.families || []).find(f => f.name === name);
         activeBornInto = fam ? fam.id : name;
       }
@@ -2022,8 +2070,13 @@ function renderCards(){
   const list = DB.characters.filter(c => {
     if (activeFaction !== 'Все' && clanName(c) !== activeFaction) return false;
     if (activeCountry !== 'Все' && !(c.countries || []).includes(activeCountry)) return false;
-    if (activeBornInto !== 'Все' && c.bornInto !== activeBornInto) return false;
-    if (!q) return true;
+        if (activeBornInto !== 'Все') {
+      if (activeBornInto === '_none_') {
+        if (c.bornInto) return false;
+      } else {
+        if (c.bornInto !== activeBornInto) return false;
+      }
+    }
     return (c.name || '').toLowerCase().includes(q);
   });
 
@@ -2046,9 +2099,8 @@ function renderCards(){
       <div class="card-meta">
                 <span class="badge" style="color:${textOnClan(c)}">${esc(clanName(c))}</span>
         ${c.countries?.length ? `<span class="badge ghost">${flagsHTML(c.countries)}</span>` : ''}
-        ${life ? `<span class="badge ghost">${life}</span>` : ''}
-        ${c.born != null ? `<span class="badge ghost">${age.text}</span>` : ''}
-      </div>
+                ${life ? `<span class="badge ghost" title="Год рождения${c.died ? ' и смерти' : ''}"><span style="opacity:.5;font-size:10px;margin-right:3px;text-transform:lowercase">${c.died ? 'годы' : 'г.р.'}</span>${life}</span>` : ''}
+        ${c.born != null ? `<span class="badge ghost" title="Возраст на ${viewYear} год"><span style="opacity:.5;font-size:10px;margin-right:3px;text-transform:lowercase">возр.</span>${age.text}</span>` : ''}
     </article>`;
   }).join('');
 
@@ -2221,7 +2273,9 @@ function openChar(id){
         return `<div><b>Поколение</b><span>${g}</span></div>`;
       })()}
       <div><b>Профессия</b><span>${esc(c.role)}</span></div>
-      <div><b>Возраст · ${viewYear}</b><span>${age.text}${life ? ` <span style="color:var(--dim);font-size:12px">(${life})</span>` : ''}</span></div>
+            <div><b>Возраст</b><span>${age.text} <span style="color:var(--dim);font-size:12px">(на ${viewYear} г.)</span></span></div>
+      ${c.born != null ? `<div><b>Год рождения</b><span>${c.born}</span></div>` : ''}
+      ${c.died != null ? `<div><b>Год смерти</b><span>${c.died}</span></div>` : ''}
       <div><b>Страны</b><span>${flagsHTML(c.countries) || '—'}</span></div>
       <div><b>Статус</b><span>${esc(c.status)}</span></div>
     </div>
@@ -2457,13 +2511,9 @@ function openCharForm(id){
       <label class="full">Теги <span class="hint">через запятую</span>
         <input name="tags" value="${esc((c.tags || []).join(', '))}"></label>
 
-      <label class="full">Страны <span class="hint">отметьте те, где жил(а)</span>
-        <div class="checks">
-          ${countryEntries.map(([code, co]) => `
-            <label><input type="checkbox" name="country" value="${esc(code)}"
-              ${(c.countries || []).includes(code) ? 'checked' : ''}>
-              ${co.flag} ${esc(co.name)}</label>`).join('')}
-        </div>
+      <label class="full">Страны <span class="hint">порядок сверху вниз = хронология переездов</span>
+        <div class="country-chain-list" id="countryChainList"></div>
+        <button type="button" class="btn-add" id="btnAddCountry" style="margin-top:8px; padding:6px 14px; font-size:12px;">+ Добавить страну</button>
       </label>
 
       <label class="full">Биография<textarea name="bio">${esc(c.bio)}</textarea></label>
@@ -2483,6 +2533,52 @@ function openCharForm(id){
       <button class="primary" type="button" id="ff-save">Сохранить</button>
     </div>
   `;
+
+  /* ============================================================
+     Редактор стран (цепочка)
+     ============================================================ */
+  let formCountries = [...(c.countries || [])];
+  const countryList = $('#countryChainList');
+
+  function renderCountryChain() {
+    countryList.innerHTML = formCountries.map((code, i) => `
+      <div class="country-chain-row">
+        <select data-idx="${i}">
+          <option value="">— выберите страну —</option>
+          ${countryEntries.map(([cCode, co]) => `
+            <option value="${cCode}" ${code === cCode ? 'selected' : ''}>${co.flag} ${esc(co.name)}</option>
+          `).join('')}
+        </select>
+        <button type="button" class="country-chain-del" data-idx="${i}" title="Удалить">✕</button>
+      </div>
+    `).join('');
+
+    countryList.querySelectorAll('select').forEach(sel => {
+      sel.onchange = e => {
+        const idx = +e.target.dataset.idx;
+        formCountries[idx] = e.target.value;
+      };
+    });
+
+    countryList.querySelectorAll('.country-chain-del').forEach(btn => {
+      btn.onclick = () => {
+        const idx = +btn.dataset.idx;
+        formCountries.splice(idx, 1);
+        renderCountryChain();
+      };
+    });
+  }
+
+  $('#btnAddCountry').onclick = () => {
+    formCountries.push('');
+    renderCountryChain();
+    setTimeout(() => {
+      const lastSelect = countryList.querySelector('.country-chain-row:last-child select');
+      if (lastSelect) { lastSelect.focus(); lastSelect.scrollIntoView({ block: 'center' }); }
+    }, 50);
+  };
+
+  renderCountryChain();
 
   /* фото */
   const photoInput = $('#formSheet [name=photo]');
@@ -2520,7 +2616,6 @@ function openCharForm(id){
     .filter(x => x.id !== c.id)
     .sort((a,b) => a.name.localeCompare(b.name, 'ru'));
 
-  /* загружаем существующие связи в формате «с точки зрения c» */
   const formRels = [];
   DB.relations
     .filter(r => r.a === c.id || r.b === c.id)
@@ -2665,7 +2760,6 @@ function openCharForm(id){
   $('#relAdd').onclick = () => {
     formRels.push({ other: '', type: 'супруг', label: '' });
     renderRels();
-    /* прокрутим к последней строке */
     setTimeout(() => {
       const last = relBox.querySelector('.rel-edit-row:last-child');
       if (last) last.scrollIntoView({ behavior:'smooth', block:'center' });
@@ -2695,7 +2789,7 @@ function openCharForm(id){
       born: bornRaw === '' ? null : +bornRaw,
       died: diedRaw === '' ? null : +diedRaw,
       tags: get('tags').split(',').map(s => s.trim()).filter(Boolean),
-      countries: [...$('#formSheet').querySelectorAll('[name=country]:checked')].map(x => x.value),
+      countries: formCountries.filter(Boolean),
       bio: get('bio'), quote: get('quote'), traits, secret: get('secret'),
       generation: (() => {
         const v = get('generation');
@@ -2705,14 +2799,12 @@ function openCharForm(id){
       })(),
     };
 
-       if (isNew) DB.characters.push({ ...c, ...patch });
+    if (isNew) DB.characters.push({ ...c, ...patch });
     else Object.assign(byId(id), patch);
 
     /* --- сохраняем связи --- */
-    /* 1. Удаляем все связи, где участвует этот персонаж */
     DB.relations = DB.relations.filter(r => r.a !== c.id && r.b !== c.id);
 
-    /* 2. Добавляем заново из формы */
     formRels.forEach(r => {
       if (!r.other || r.other === c.id) return;
       if (r.type === 'родитель'){
@@ -2720,7 +2812,6 @@ function openCharForm(id){
       } else if (r.type === 'ребёнок'){
         DB.relations.push({ a: r.other, b: c.id, t: 'родитель', label: r.label });
       } else if (r.type === 'супруг' || r.type === 'брат'){
-        /* не создаём дубль, если такая же связь уже есть в обратную сторону */
         const dup = DB.relations.some(x =>
           x.t === r.type &&
           ((x.a === c.id && x.b === r.other) || (x.a === r.other && x.b === c.id))
@@ -2739,6 +2830,7 @@ function openCharForm(id){
 
   $('#formModal').classList.add('on');
 }
+
 function closeForm(){ $('#formModal').classList.remove('on'); }
 $('#formModal').onclick = e => { if (e.target.id === 'formModal') closeForm(); };
 
