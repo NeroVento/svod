@@ -2943,6 +2943,137 @@
       "photo": "",
       "born": 65,
       "died": null
+    },
+    {
+      "id": "cmw9rqpupxd8b",
+      "name": "Альдобрандини Антонио",
+      "alias": "Нино",
+      "gender": "м",
+      "generation": null,
+      "faction": "aldobrandini",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "it"
+      ],
+      "role": "Биоинформатик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Герцог с дурным характером": 10,
+        "Вегетарианство": 7,
+        "Любовь к афалинам": 10,
+        "Сарказм": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 76,
+      "died": null
+    },
+    {
+      "id": "cmw9ruo80zkoe",
+      "name": "Альдобрандини Микеланджело",
+      "alias": "Анджело",
+      "gender": "м",
+      "generation": 2,
+      "faction": "aldobrandini",
+      "bornInto": "aldobrandini",
+      "countries": [
+        "it"
+      ],
+      "role": "Юрист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Лженджело": 10,
+        "Дарит острова": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 66,
+      "died": null
+    },
+    {
+      "id": "cmw9s2nt30icp",
+      "name": "Альдобрандини Фернандо",
+      "alias": "Ферно",
+      "gender": "м",
+      "generation": 2,
+      "faction": "aldobrandini",
+      "bornInto": "aldobrandini",
+      "countries": [
+        "it"
+      ],
+      "role": "Герцог",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Аквариумистика": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 40,
+      "died": null
+    },
+    {
+      "id": "cmw9s51fbegf9",
+      "name": "Альдобрандини Валентино",
+      "alias": "Вале",
+      "gender": "м",
+      "generation": 2,
+      "faction": "aldobrandini",
+      "bornInto": "",
+      "countries": [
+        "it"
+      ],
+      "role": "Муж герцога",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Сплетник": 5
+      },
+      "secret": "",
+      "photo": "",
+      "born": 40,
+      "died": null
+    },
+    {
+      "id": "cmw9s8wjyxjjr",
+      "name": "Альдобрандини Кристиано",
+      "alias": "Крися",
+      "gender": "м",
+      "generation": 3,
+      "faction": "aldobrandini",
+      "bornInto": "aldobrandini",
+      "countries": [
+        "it"
+      ],
+      "role": "Мэр",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Хитрожопость": 10,
+        "Конь": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 68,
+      "died": null
     }
   ],
   "events": [],
@@ -4464,6 +4595,66 @@
       "b": "cmvmjjd257drt",
       "t": "супруг",
       "label": "Муж"
+    },
+    {
+      "a": "cmv5tlr29k1ft",
+      "b": "cmw9rqpupxd8b",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv5slije8jst",
+      "b": "cmw9rqpupxd8b",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmw9rqpupxd8b",
+      "b": "cmv5tqlxnogtm",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmw9ruo80zkoe",
+      "b": "cmw9rqpupxd8b",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmw9s51fbegf9",
+      "b": "cmw9ruo80zkoe",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmw9s2nt30icp",
+      "b": "cmw9ruo80zkoe",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmw9s2nt30icp",
+      "b": "cmw9s51fbegf9",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmw9s51fbegf9",
+      "b": "cmw9s8wjyxjjr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmw9s2nt30icp",
+      "b": "cmw9s8wjyxjjr",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmw9s8wjyxjjr",
+      "b": "cmw9ruo80zkoe",
+      "t": "брат",
+      "label": "Брат"
     }
   ],
   "locations": [
