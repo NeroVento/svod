@@ -2146,7 +2146,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 18,
+      "born": 15,
       "died": null
     },
     {
@@ -3161,7 +3161,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 18,
+      "born": 15,
       "died": null
     },
     {
@@ -3172,7 +3172,9 @@
       "generation": 0,
       "faction": "romano",
       "bornInto": "romano",
-      "countries": [],
+      "countries": [
+        "fr"
+      ],
       "role": "Дипломат, переводчик, профессор Сорбонны",
       "status": "жив(а)",
       "tagline": "",
@@ -3199,7 +3201,8 @@
       "bornInto": "ushijima",
       "countries": [
         "jp",
-        "fr"
+        "fr",
+        "no"
       ],
       "role": "Дизайнер",
       "status": "жив(а)",
@@ -3224,7 +3227,8 @@
       "faction": "romano",
       "bornInto": "romano",
       "countries": [
-        "fr"
+        "fr",
+        "no"
       ],
       "role": "Инженер-энергетик",
       "status": "жив(а)",
@@ -3239,6 +3243,60 @@
       "secret": "",
       "photo": "",
       "born": 25,
+      "died": null
+    },
+    {
+      "id": "cmwch6nrgp076",
+      "name": "Романо Деклан",
+      "alias": "",
+      "gender": "м",
+      "generation": 2,
+      "faction": "romano",
+      "bornInto": "romano",
+      "countries": [
+        "no",
+        "fr"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Балбеска": 10,
+        "Блонди": 100000
+      },
+      "secret": "",
+      "photo": "",
+      "born": 54,
+      "died": null
+    },
+    {
+      "id": "cmwchf1jm82vj",
+      "name": "Романо Лене",
+      "alias": "",
+      "gender": "ж",
+      "generation": 0,
+      "faction": "romano",
+      "bornInto": "",
+      "countries": [
+        "no",
+        "jp",
+        "fr"
+      ],
+      "role": "Горнолыжница",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Стальная леди": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": -5,
       "died": null
     }
   ],
@@ -4295,34 +4353,10 @@
       "label": "Отец"
     },
     {
-      "a": "cmv4fu1jphri2",
-      "b": "cmv4dwi8flzye",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvcs0gonj29u",
-      "b": "cmv4fu1jphri2",
-      "t": "родитель",
-      "label": "Мать"
-    },
-    {
       "a": "cmv5tfmhmubsn",
       "b": "cmv5swr5dk7t0",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmvcs0gonj29u",
-      "b": "cmv5tfmhmubsn",
-      "t": "родитель",
-      "label": "Мать"
-    },
-    {
-      "a": "cmv5tfmhmubsn",
-      "b": "cmv4fu1jphri2",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv5tlr29k1ft",
@@ -4335,18 +4369,6 @@
       "b": "cmv5tqlxnogtm",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmvcs0gonj29u",
-      "b": "cmv5tlr29k1ft",
-      "t": "родитель",
-      "label": "Мать"
-    },
-    {
-      "a": "cmv5tlr29k1ft",
-      "b": "cmv4fu1jphri2",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv5tlr29k1ft",
@@ -4643,19 +4665,7 @@
       "label": "Отец"
     },
     {
-      "a": "cmv4fu1jphri2",
-      "b": "cmvmgmogor3g1",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmv4dwi8flzye",
-      "b": "cmvmgqrqapda9",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv4fu1jphri2",
       "b": "cmvmgqrqapda9",
       "t": "родитель",
       "label": "Отец"
@@ -4667,19 +4677,7 @@
       "label": "Отец"
     },
     {
-      "a": "cmvmi82uh6fvv",
-      "b": "cmv4fu1jphri2",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
       "a": "cmv4dwi8flzye",
-      "b": "cmvmho9jgvhgb",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv4fu1jphri2",
       "b": "cmvmho9jgvhgb",
       "t": "родитель",
       "label": "Отец"
@@ -4871,34 +4869,10 @@
       "label": "Брат"
     },
     {
-      "a": "cmwcg398ybur1",
-      "b": "cmvcs0gonj29u",
-      "t": "супруг",
-      "label": "Жена"
-    },
-    {
-      "a": "cmwcg398ybur1",
-      "b": "cmv5tfmhmubsn",
+      "a": "cmwcgl7db45h2",
+      "b": "cmwch6nrgp076",
       "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmwcg398ybur1",
-      "b": "cmv5tlr29k1ft",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmwcg398ybur1",
-      "b": "cmv4fu1jphri2",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmwcgbgtkipvr",
-      "b": "cmwcg398ybur1",
-      "t": "родитель",
-      "label": "Сын"
+      "label": "Отец"
     },
     {
       "a": "cmuzggner81r2",
@@ -4937,8 +4911,14 @@
       "label": "Сестра"
     },
     {
-      "a": "cmwcgl7db45h2",
-      "b": "cmwcghnt4qk6e",
+      "a": "cmwcghnt4qk6e",
+      "b": "cmwch6nrgp076",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmwcgl7db45h2",
       "t": "супруг",
       "label": "Муж"
     },
@@ -4946,7 +4926,115 @@
       "a": "cmwcgbgtkipvr",
       "b": "cmwcgl7db45h2",
       "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwchf1jm82vj",
+      "b": "cmwcgbgtkipvr",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmwchf1jm82vj",
+      "b": "cmwcgl7db45h2",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv5tfmhmubsn",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv5tlr29k1ft",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcgbgtkipvr",
+      "b": "cmwcg398ybur1",
+      "t": "родитель",
+      "label": "Приемный сын"
+    },
+    {
+      "a": "cmwchf1jm82vj",
+      "b": "cmwcg398ybur1",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv5tfmhmubsn",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv5tlr29k1ft",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmwcg398ybur1",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmv4dwi8flzye",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmv5tfmhmubsn",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmv5tlr29k1ft",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmgmogor3g1",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmgqrqapda9",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmi82uh6fvv",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmho9jgvhgb",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv4fu1jphri2",
+      "t": "родитель",
       "label": "Отец"
+    },
+    {
+      "a": "cmvcs0gonj29u",
+      "b": "cmv4fu1jphri2",
+      "t": "родитель",
+      "label": "Мать"
     }
   ],
   "locations": [
