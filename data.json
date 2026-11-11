@@ -20,6 +20,11 @@
       "flag": "🇰🇷",
       "color": "#7fb8d8"
     },
+    "no": {
+      "name": "Норвегия",
+      "flag": "🇳🇴",
+      "color": "#1f1f3"
+    },
     "es": {
       "name": "Испания",
       "flag": "🇪🇸",
@@ -3130,6 +3135,111 @@
       "photo": "",
       "born": 55,
       "died": null
+    },
+    {
+      "id": "cmwcg398ybur1",
+      "name": "Дзингудзи Юичи",
+      "alias": "Папочка Гудзь",
+      "gender": "м",
+      "generation": 1,
+      "faction": "jinguji",
+      "bornInto": "hijirikawa",
+      "countries": [
+        "jp",
+        "fr",
+        "it"
+      ],
+      "role": "Домохозяин",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Доброта": 10,
+        "Любовь к детям": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 18,
+      "died": null
+    },
+    {
+      "id": "cmwcgbgtkipvr",
+      "name": "Романо Шарль-Анри",
+      "alias": "",
+      "gender": "м",
+      "generation": 0,
+      "faction": "romano",
+      "bornInto": "romano",
+      "countries": [],
+      "role": "Дипломат, переводчик, профессор Сорбонны",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "Лене, там гусеница!",
+      "traits": {
+        "Хитрость": 10,
+        "Любовь к животным": 10,
+        "Рок": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 0,
+      "died": null
+    },
+    {
+      "id": "cmwcghnt4qk6e",
+      "name": "Романо Адам",
+      "alias": "Адамчик",
+      "gender": "м",
+      "generation": null,
+      "faction": "romano",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "fr"
+      ],
+      "role": "Дизайнер",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Альбиносие": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 29,
+      "died": null
+    },
+    {
+      "id": "cmwcgl7db45h2",
+      "name": "Романо Лив",
+      "alias": "Ливчик",
+      "gender": "м",
+      "generation": null,
+      "faction": "romano",
+      "bornInto": "romano",
+      "countries": [
+        "fr"
+      ],
+      "role": "Инженер-энергетик",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Резиновые сапоги": 7,
+        "Светоносец": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 25,
+      "died": null
     }
   ],
   "events": [],
@@ -4759,6 +4869,84 @@
       "b": "cmvcr04hge75g",
       "t": "брат",
       "label": "Брат"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmvcs0gonj29u",
+      "t": "супруг",
+      "label": "Жена"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv5tfmhmubsn",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv5tlr29k1ft",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcg398ybur1",
+      "b": "cmv4fu1jphri2",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcgbgtkipvr",
+      "b": "cmwcg398ybur1",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmwcghnt4qk6e",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmwcghnt4qk6e",
+      "t": "родитель",
+      "label": "Приемный отец"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmuzin7ne0b28",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmv2vlwh1a2d0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmv2zrw3u5am8",
+      "t": "брат",
+      "label": "Сестра"
+    },
+    {
+      "a": "cmwcgl7db45h2",
+      "b": "cmwcghnt4qk6e",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmwcgbgtkipvr",
+      "b": "cmwcgl7db45h2",
+      "t": "родитель",
+      "label": "Отец"
     }
   ],
   "locations": [
