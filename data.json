@@ -130,11 +130,6 @@
       "color": "#228B22"
     },
     {
-      "id": "richard",
-      "name": "Ришары",
-      "color": "#FFE4E1"
-    },
-    {
       "id": "aldobrandini",
       "name": "Альдобрандини",
       "color": "#FF8C00"
@@ -158,6 +153,16 @@
       "id": "galiardo",
       "name": "Гальярдо",
       "color": "#A0522D"
+    },
+    {
+      "id": "romano",
+      "name": "Романо",
+      "color": "#FFFFF0"
+    },
+    {
+      "id": "hijirikawa",
+      "name": "Хиджирикавы",
+      "color": "#483D8B"
     },
     {
       "id": "keil-kamelot",
@@ -1839,7 +1844,7 @@
       },
       "secret": "",
       "photo": "",
-      "born": 57,
+      "born": 55,
       "died": null
     },
     {
@@ -3073,6 +3078,57 @@
       "secret": "",
       "photo": "",
       "born": 68,
+      "died": null
+    },
+    {
+      "id": "cmwcf74iekeoi",
+      "name": "Мадарамэ Айга",
+      "alias": "Лап",
+      "gender": "м",
+      "generation": 2,
+      "faction": "madarame",
+      "bornInto": "camelot",
+      "countries": [
+        "gb",
+        "jp"
+      ],
+      "role": "Блогер",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Гибкость": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 55,
+      "died": null
+    },
+    {
+      "id": "cmwcfh00mlt3p",
+      "name": "Ушиджима Юмэй",
+      "alias": "Мэй",
+      "gender": "м",
+      "generation": 2,
+      "faction": "ushijima",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp"
+      ],
+      "role": "Модель",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Мур": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 55,
       "died": null
     }
   ],
@@ -4453,24 +4509,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmva0zcvmrl1z",
-      "b": "cmva1x3wc2zya",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
-      "b": "cmva1x3wc2zya",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva1x3wc2zya",
-      "b": "cmvi66859e2wf",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
       "a": "cmvi5ip3i0hu7",
       "b": "cmvi6ef5lzrxw",
       "t": "родитель",
@@ -4561,12 +4599,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmvmj69vv5i7p",
-      "b": "cmva1x3wc2zya",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmva0zcvmrl1z",
       "b": "cmvmjjd257drt",
       "t": "родитель",
@@ -4577,12 +4609,6 @@
       "b": "cmvmjjd257drt",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmva1x3wc2zya",
-      "b": "cmvmjjd257drt",
-      "t": "родитель",
-      "label": "Брат"
     },
     {
       "a": "cmvmj69vv5i7p",
@@ -4653,6 +4679,84 @@
     {
       "a": "cmw9s8wjyxjjr",
       "b": "cmw9ruo80zkoe",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmva1x3wc2zya",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva1x3wc2zya",
+      "b": "cmvi66859e2wf",
+      "t": "супруг",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva1x3wc2zya",
+      "b": "cmvmj69vv5i7p",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva1x3wc2zya",
+      "b": "cmvmjjd257drt",
+      "t": "родитель",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcf74iekeoi",
+      "b": "cmva1x3wc2zya",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzfpwejm8f5",
+      "b": "cmwcf74iekeoi",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmvi5ip3i0hu7",
+      "b": "cmwcf74iekeoi",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzfhizhzx89",
+      "b": "cmwcfh00mlt3p",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzf2fs1vpov",
+      "b": "cmwcfh00mlt3p",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwcfh00mlt3p",
+      "b": "cmv5slije8jst",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcfh00mlt3p",
+      "b": "cmv5swr5dk7t0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcfh00mlt3p",
+      "b": "cmvcr04hge75g",
       "t": "брат",
       "label": "Брат"
     }
