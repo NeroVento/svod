@@ -939,7 +939,8 @@
   cursor: pointer;
   outline: none;
   appearance: none;
-  -webkit-appearance: none;
+  width: 180px;      /* <-- Фиксируем ширину */
+  max-width: 180px;  /* <-- Запрещаем растягиваться */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%238593a6' d='M6 8L0 0h12z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 12px center;
@@ -1149,6 +1150,10 @@
   <div class="filter-group">
     <label>Род</label>
     <select id="bornIntoFilter" class="filter-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Поколение</label>
+    <select id="generationFilter" class="filter-select"></select>
   </div>
   <div class="filter-group">
     <label>Страна</label>
@@ -1603,6 +1608,7 @@ let llCountryFilter = 'Все';
 let viewYear = 1252;
 let bloodOnly = false;
 let activeLocCountry = 'Все';
+let activeGeneration = 'Все';
 
 /* ============================================================
    Загрузка данных
@@ -1842,6 +1848,7 @@ function renderAll(){
   renderFactions();
   renderCountries();
   renderBornIntoFilter();
+  renderGenerationFilter();
   renderStats();
   renderCards();
   renderLocCountries();
@@ -1955,6 +1962,47 @@ function renderBornIntoFilter(){
 
   sel.onchange = e => {
     activeBornInto = e.target.value;
+    renderCards();
+  };
+}
+
+/* ---------- фильтр поколений ---------- */
+function renderGenerationFilter(){
+  const sel = $('#generationFilter');
+  if (!sel) return;
+
+  const usedGens = new Set();
+  let noGenCount = 0;
+
+  DB.characters.forEach(c => {
+    if (c.generation != null && c.generation !== '') {
+      usedGens.add(c.generation);
+    } else {
+      noGenCount++;
+    }
+  });
+
+  /* Сортируем по возрастанию (от -1 к 0, 1, 2...) */
+  const sorted = [...usedGens].sort((a, b) => a - b);
+
+  /* Если активное поколение удалили или изменили — сбрасываем */
+  if (activeGeneration !== 'Все' && activeGeneration !== '_none_') {
+    if (!sorted.includes(+activeGeneration)) activeGeneration = 'Все';
+  }
+  if (activeGeneration === '_none_' && noGenCount === 0) {
+    activeGeneration = 'Все';
+  }
+
+  sel.innerHTML = `
+    <option value="Все">Все поколения</option>
+    ${sorted.map(g => `
+      <option value="${g}" ${g == activeGeneration ? 'selected' : ''}>${g}</option>
+    `).join('')}
+    ${noGenCount > 0 ? `<option value="_none_" ${activeGeneration === '_none_' ? 'selected' : ''}>Без поколения</option>` : ''}
+  `;
+
+  sel.onchange = e => {
+    activeGeneration = e.target.value;
     renderCards();
   };
 }
@@ -2075,6 +2123,13 @@ function renderCards(){
         if (c.bornInto) return false;
       } else {
         if (c.bornInto !== activeBornInto) return false;
+      }
+    }
+        if (activeGeneration !== 'Все') {
+      if (activeGeneration === '_none_') {
+        if (c.generation != null && c.generation !== '') return false;
+      } else {
+        if (c.generation != +activeGeneration) return false;
       }
     }
     return (c.name || '').toLowerCase().includes(q);
@@ -2453,6 +2508,8 @@ function openCharForm(id){
   const factions = Object.keys(DB.factions);
   const traitsStr = Object.entries(c.traits || {}).map(([k,v]) => `${k}: ${v}`).join('\n');
   const countryEntries = Object.entries(DB.countries || {});
+    /* Сортируем семьи по алфавиту для выпадающих списков */
+  const sortedFamilies = [...(DB.families || [])].sort((a, b) => a.name.localeCompare(b.name, 'ru'));
 
   $('#formSheet').innerHTML = `
     <button class="close" onclick="closeForm()">✕</button>
@@ -2464,7 +2521,7 @@ function openCharForm(id){
       <label>Клан
         <select name="faction">
           <option value="">— вне кланов —</option>
-          ${(DB.families || []).map(f => `
+          ${sortedFamilies.map(f => `
             <option value="${esc(f.id)}" ${c.faction === f.id || c.faction === f.name ? 'selected' : ''}>${esc(f.name)}</option>
           `).join('')}
         </select>
@@ -2472,7 +2529,7 @@ function openCharForm(id){
       <label>Рождён в семье
         <select name="bornInto">
           <option value="">— вне семей —</option>
-          ${(DB.families || []).map(f => `
+          ${sortedFamilies.map(f => `
             <option value="${esc(f.id)}" ${c.bornInto === f.id ? 'selected' : ''}>${esc(f.name)}</option>
           `).join('')}
         </select>
