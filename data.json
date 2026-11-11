@@ -165,13 +165,18 @@
       "color": "#FFFFF0"
     },
     {
+      "id": "rohan",
+      "name": "де Роаны",
+      "color": "#DC143C"
+    },
+    {
       "id": "hijirikawa",
       "name": "Хиджирикавы",
       "color": "#483D8B"
     },
     {
       "id": "keil-kamelot",
-      "name": "Кэйл-Камелот",
+      "name": "Кэйл-Камелоты",
       "color": "#BC8F8F"
     }
   ],
