@@ -105,6 +105,11 @@
       "color": "#FF7F50"
     },
     {
+      "id": "kageyama",
+      "name": "Кагеямы",
+      "color": "#191970"
+    },
+    {
       "id": "camelot",
       "name": "Камелоты",
       "color": "#800000"
