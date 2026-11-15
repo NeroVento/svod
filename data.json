@@ -1996,7 +1996,7 @@
       "name": "Тэван Со Ён",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "tewan",
       "bornInto": "tewan",
       "countries": [
@@ -2023,7 +2023,7 @@
       "name": "Тэван Амато",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "tewan",
       "bornInto": "tewan",
       "countries": [
@@ -2181,7 +2181,7 @@
       "name": "Каштелу-Бранку Шедар",
       "alias": "Шери, Шер",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "",
       "bornInto": "camelot",
       "countries": [
@@ -2210,7 +2210,7 @@
       "name": "Камелот Нави",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "camelot",
       "bornInto": "camelot",
       "countries": [
@@ -2238,7 +2238,7 @@
       "name": "Ушиджима Арктур",
       "alias": "Тури",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "ushijima",
       "bornInto": "camelot",
       "countries": [
@@ -2267,7 +2267,7 @@
       "name": "Камелот Сириус",
       "alias": "Сири",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "camelot",
       "bornInto": "camelot",
       "countries": [
@@ -2296,7 +2296,7 @@
       "name": "Каштелу-Бранку Руи",
       "alias": "Руй",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "",
       "bornInto": "",
       "countries": [
@@ -2324,7 +2324,7 @@
       "name": "Камелот Джованни",
       "alias": "Джанни",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "camelot",
       "bornInto": "andolini",
       "countries": [
@@ -2353,7 +2353,7 @@
       "name": "Перейра Авейру Камелот Динис Хосе",
       "alias": "Хося",
       "gender": "",
-      "generation": null,
+      "generation": 3,
       "faction": "camelot",
       "bornInto": "",
       "countries": [
@@ -2382,7 +2382,7 @@
       "name": "Тэван Чау",
       "alias": "Чаушка",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "tewan",
       "bornInto": "tewan",
       "countries": [
@@ -2409,7 +2409,7 @@
       "name": "Тэван Макото",
       "alias": "Кота",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "tewan",
       "bornInto": "iwaizumi",
       "countries": [
@@ -2438,7 +2438,7 @@
       "name": "Тэван Рафаэль",
       "alias": "Рафа",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "tewan",
       "bornInto": "tewan",
       "countries": [
@@ -2466,7 +2466,7 @@
       "name": "Тэван Ян",
       "alias": "Янчик, Янч",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "tewan",
       "bornInto": "kanda",
       "countries": [
@@ -2494,7 +2494,7 @@
       "name": "Гальярдо Рёи",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "",
       "bornInto": "kanda",
       "countries": [
@@ -2518,7 +2518,7 @@
       "name": "Канда Шибуй",
       "alias": "Кислый",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "kanda",
       "bornInto": "kanda",
       "countries": [
@@ -2541,7 +2541,7 @@
       "name": "Канда Амай",
       "alias": "Сладкий",
       "gender": "",
-      "generation": null,
+      "generation": 3,
       "faction": "kanda",
       "bornInto": "kanda",
       "countries": [
@@ -2638,7 +2638,7 @@
       "name": "Гальярдо Балорчик",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "galiardo",
       "bornInto": "galiardo",
       "countries": [
@@ -2717,7 +2717,7 @@
       "name": "Кэйл-Камелот Тристан",
       "alias": "Триси, Трис",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "",
       "bornInto": "camelot",
       "countries": [
@@ -2744,7 +2744,7 @@
       "name": "Ушиджима Чезаре",
       "alias": "Чезик",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "ushijima",
       "bornInto": "ushijima",
       "countries": [
@@ -2771,7 +2771,7 @@
       "name": "Ушиджима Фирочка",
       "alias": "Фира",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "ushijima",
       "bornInto": "ushijima",
       "countries": [
@@ -2798,7 +2798,7 @@
       "name": "Каштелу-Бранку Тарталья",
       "alias": "Тортик",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "",
       "bornInto": "ushijima",
       "countries": [
@@ -2825,7 +2825,7 @@
       "name": "Ушиджима Вакатошик",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "ushijima",
       "bornInto": "ushijima",
       "countries": [
@@ -2852,7 +2852,7 @@
       "name": "Каштелу-Бранку Чжун Ли",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 4,
       "faction": "",
       "bornInto": "",
       "countries": [],
@@ -2876,7 +2876,7 @@
       "name": "Ушиджима Киллиан",
       "alias": "Киля",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "ushijima",
       "bornInto": "",
       "countries": [
@@ -2904,7 +2904,7 @@
       "name": "Мадарамэ Рюу",
       "alias": "",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "madarame",
       "bornInto": "madarame",
       "countries": [
@@ -2930,7 +2930,7 @@
       "name": "Андолини Сумирэ",
       "alias": "Суэ, Фиалка",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "andolini",
       "bornInto": "andolini",
       "countries": [
@@ -2958,7 +2958,7 @@
       "name": "Андолини Сальваторе",
       "alias": "Сальво",
       "gender": "м",
-      "generation": null,
+      "generation": 2,
       "faction": "andolini",
       "bornInto": "andolini",
       "countries": [
@@ -2986,7 +2986,7 @@
       "name": "Альдобрандини Антонио",
       "alias": "Нино",
       "gender": "м",
-      "generation": null,
+      "generation": 3,
       "faction": "aldobrandini",
       "bornInto": "ushijima",
       "countries": [
@@ -3223,7 +3223,7 @@
       "name": "Романо Адам",
       "alias": "Адамчик",
       "gender": "м",
-      "generation": null,
+      "generation": 1,
       "faction": "romano",
       "bornInto": "ushijima",
       "countries": [
@@ -3250,7 +3250,7 @@
       "name": "Романо Лив",
       "alias": "Ливчик",
       "gender": "м",
-      "generation": null,
+      "generation": 1,
       "faction": "romano",
       "bornInto": "romano",
       "countries": [
@@ -3666,96 +3666,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmvcrcpdms66v",
-      "b": "cmv4f11c22l10",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvcqnoutbkup",
-      "b": "cmvcrcpdms66v",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcrcpdms66v",
-      "b": "cmvcr3gnfk337",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvcr04hge75g",
-      "b": "cmvcr7heb9e3t",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcr3gnfk337",
-      "b": "cmvcr7heb9e3t",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvea77b8jr22",
-      "b": "cmve9xa4qv9l1",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvean30r1z4w",
-      "b": "cmve9xa4qv9l1",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvcqnoutbkup",
-      "b": "cmvfre7m7gm7w",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvfre7m7gm7w",
-      "b": "cmvcrcpdms66v",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfre7m7gm7w",
-      "b": "cmvcr3gnfk337",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfroemfgzx0",
-      "b": "cmvfre7m7gm7w",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvcqnoutbkup",
-      "b": "cmvfs5j070e0w",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvfs5j070e0w",
-      "b": "cmvcrcpdms66v",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfs5j070e0w",
-      "b": "cmvcr3gnfk337",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfs5j070e0w",
-      "b": "cmvfre7m7gm7w",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmvcqrcctfk74",
       "b": "cmvcr3gnfk337",
       "t": "родитель",
@@ -3764,180 +3674,6 @@
     {
       "a": "cmvcqrcctfk74",
       "b": "cmvcqnoutbkup",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvcqrcctfk74",
-      "b": "cmvcrcpdms66v",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcqrcctfk74",
-      "b": "cmvfre7m7gm7w",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcqrcctfk74",
-      "b": "cmvfs5j070e0w",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmveaefhildig",
-      "b": "cmve9xa4qv9l1",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmveaefhildig",
-      "b": "cmvea77b8jr22",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmveaefhildig",
-      "b": "cmv4fp4ilorei",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmveaqhyd2lxp",
-      "b": "cmvea77b8jr22",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvh9a1g7m564",
-      "b": "cmvh95e674r9m",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvh97xlgk1lf",
-      "b": "cmvh95e674r9m",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvh97xlgk1lf",
-      "b": "cmvh9a1g7m564",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfsa95g2cvf",
-      "b": "cmvh95e674r9m",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfsa95g2cvf",
-      "b": "cmvh9a1g7m564",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfsa95g2cvf",
-      "b": "cmvh97xlgk1lf",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvfsa95g2cvf",
-      "b": "cmvfs5j070e0w",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmveailtwr4v7",
-      "b": "cmve9xa4qv9l1",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmveailtwr4v7",
-      "b": "cmvea77b8jr22",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmveailtwr4v7",
-      "b": "cmveawk7l7cui",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmveailtwr4v7",
-      "b": "cmveaefhildig",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmv4dwi8flzye",
-      "b": "cmvmgmogor3g1",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv4dwi8flzye",
-      "b": "cmvmgqrqapda9",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvmi82uh6fvv",
-      "b": "cmv4dwi8flzye",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv4dwi8flzye",
-      "b": "cmvmho9jgvhgb",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvmivg0pzo0j",
-      "b": "cmvmho9jgvhgb",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvmiz49vzoip",
-      "b": "cmvmgqrqapda9",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvmj69vv5i7p",
-      "b": "cmvmjjd257drt",
-      "t": "родитель",
-      "label": "Брат"
-    },
-    {
-      "a": "cmvmjvf456xg2",
-      "b": "cmvmjjd257drt",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmv5slije8jst",
-      "b": "cmw9rqpupxd8b",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmw9rqpupxd8b",
-      "b": "cmv5tqlxnogtm",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmw9ruo80zkoe",
-      "b": "cmw9rqpupxd8b",
       "t": "супруг",
       "label": "Муж"
     },
@@ -3996,46 +3732,10 @@
       "label": "Брат"
     },
     {
-      "a": "cmwcgl7db45h2",
-      "b": "cmwch6nrgp076",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmwcghnt4qk6e",
-      "t": "родитель",
-      "label": "Приемный отец"
-    },
-    {
-      "a": "cmwcghnt4qk6e",
-      "b": "cmwch6nrgp076",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmwcghnt4qk6e",
-      "b": "cmwcgl7db45h2",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmwcgbgtkipvr",
-      "b": "cmwcgl7db45h2",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
       "a": "cmwchf1jm82vj",
       "b": "cmwcgbgtkipvr",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmwchf1jm82vj",
-      "b": "cmwcgl7db45h2",
-      "t": "родитель",
-      "label": "Сын"
     },
     {
       "a": "cmwcgbgtkipvr",
@@ -4153,12 +3853,6 @@
     },
     {
       "a": "cmuzfhizhzx89",
-      "b": "cmwcghnt4qk6e",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzfhizhzx89",
       "b": "cmuzf2fs1vpov",
       "t": "супруг",
       "label": "Муж"
@@ -4168,12 +3862,6 @@
       "b": "cmuzfpwejm8f5",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmuzfpwejm8f5",
-      "b": "cmvi6ef5lzrxw",
-      "t": "родитель",
-      "label": "Мать"
     },
     {
       "a": "cmuzfpwejm8f5",
@@ -4234,12 +3922,6 @@
       "b": "cmuzhz7a4ydpu",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmuzggner81r2",
-      "b": "cmwcghnt4qk6e",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuzggner81r2",
@@ -4306,12 +3988,6 @@
       "b": "cmuzin7ne0b28",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmuzin7ne0b28",
-      "b": "cmwcghnt4qk6e",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmuzin7ne0b28",
@@ -4458,54 +4134,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmve9xa4qv9l1",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmvea77b8jr22",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmveaefhildig",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzj50p0nkg0",
-      "b": "cmveailtwr4v7",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmve9xa4qv9l1",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmvea77b8jr22",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmveaefhildig",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmuziwaytfgbr",
-      "b": "cmveailtwr4v7",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
       "a": "cmuyls26p9sy5",
       "b": "cmuziwaytfgbr",
       "t": "родитель",
@@ -4540,30 +4168,6 @@
       "b": "cmuziwaytfgbr",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmv2urgg38u9d",
-      "b": "cmvh95e674r9m",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv2urgg38u9d",
-      "b": "cmvh9a1g7m564",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv2urgg38u9d",
-      "b": "cmvh97xlgk1lf",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv2urgg38u9d",
-      "b": "cmvfsa95g2cvf",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuyls26p9sy5",
@@ -4627,30 +4231,6 @@
     },
     {
       "a": "cmv2vbym13mif",
-      "b": "cmvh95e674r9m",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv2vbym13mif",
-      "b": "cmvh9a1g7m564",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv2vbym13mif",
-      "b": "cmvh97xlgk1lf",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv2vbym13mif",
-      "b": "cmvfsa95g2cvf",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv2vbym13mif",
       "b": "cmv2urgg38u9d",
       "t": "супруг",
       "label": "Муж"
@@ -4684,12 +4264,6 @@
       "b": "cmv4fp4ilorei",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmv2vlwh1a2d0",
-      "b": "cmwcghnt4qk6e",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv2vlwh1a2d0",
@@ -4738,12 +4312,6 @@
       "b": "cmv2zrw3u5am8",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmwcghnt4qk6e",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmv2zrw3u5am8",
@@ -4884,30 +4452,6 @@
       "label": "Муж"
     },
     {
-      "a": "cmv4fu1jphri2",
-      "b": "cmvmgmogor3g1",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv4fu1jphri2",
-      "b": "cmvmgqrqapda9",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv4fu1jphri2",
-      "b": "cmvmi82uh6fvv",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
-      "a": "cmv4fu1jphri2",
-      "b": "cmvmho9jgvhgb",
-      "t": "родитель",
-      "label": "Сын"
-    },
-    {
       "a": "cmwcg398ybur1",
       "b": "cmv4fu1jphri2",
       "t": "родитель",
@@ -4952,12 +4496,6 @@
     {
       "a": "cmv5tlr29k1ft",
       "b": "cmv5tqlxnogtm",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv5tlr29k1ft",
-      "b": "cmw9rqpupxd8b",
       "t": "родитель",
       "label": "Отец"
     },
@@ -5107,18 +4645,6 @@
     },
     {
       "a": "cmva0i3m1y1ew",
-      "b": "cmvmj69vv5i7p",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
-      "b": "cmvmjjd257drt",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
       "b": "cmva0fj1slhso",
       "t": "брат",
       "label": "Сестра"
@@ -5149,18 +4675,6 @@
     },
     {
       "a": "cmva1x3wc2zya",
-      "b": "cmvmj69vv5i7p",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmva1x3wc2zya",
-      "b": "cmvmjjd257drt",
-      "t": "родитель",
-      "label": "Брат"
-    },
-    {
-      "a": "cmva1x3wc2zya",
       "b": "cmwcf74iekeoi",
       "t": "супруг",
       "label": "Муж"
@@ -5168,18 +4682,6 @@
     {
       "a": "cmva0i3m1y1ew",
       "b": "cmva1x3wc2zya",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0zcvmrl1z",
-      "b": "cmvmj69vv5i7p",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
-      "a": "cmva0zcvmrl1z",
-      "b": "cmvmjjd257drt",
       "t": "родитель",
       "label": "Отец"
     },
@@ -5210,12 +4712,6 @@
     {
       "a": "cmv31yhop74se",
       "b": "cmvcrfjaaxkdo",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvcrfjaaxkdo",
-      "b": "cmvfroemfgzx0",
       "t": "родитель",
       "label": "Отец"
     },
@@ -5272,12 +4768,6 @@
       "b": "cmvcrotdlinig",
       "t": "брат",
       "label": "Сестра"
-    },
-    {
-      "a": "cmvcrumwnbmtf",
-      "b": "cmvfroemfgzx0",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmv8khctemlqu",
@@ -5317,12 +4807,6 @@
     },
     {
       "a": "cmvi5ip3i0hu7",
-      "b": "cmvi6ef5lzrxw",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvi5ip3i0hu7",
       "b": "cmwcf74iekeoi",
       "t": "родитель",
       "label": "Отец"
@@ -5332,12 +4816,6 @@
       "b": "cmuzfpwejm8f5",
       "t": "супруг",
       "label": "Жена"
-    },
-    {
-      "a": "cmvi43mlk98e1",
-      "b": "cmvi5f8zymcvc",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmv8koa9r8lra",
@@ -5353,27 +4831,9 @@
     },
     {
       "a": "cmvi4cjmkkzgj",
-      "b": "cmvi5f8zymcvc",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvi4cjmkkzgj",
       "b": "cmvi43mlk98e1",
       "t": "супруг",
       "label": "Муж"
-    },
-    {
-      "a": "cmvi5960cta0v",
-      "b": "cmvh95e674r9m",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmvi5960cta0v",
-      "b": "cmvi5f8zymcvc",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmvi43mlk98e1",
@@ -5386,12 +4846,6 @@
       "b": "cmvi5960cta0v",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmvi66859e2wf",
-      "b": "cmvi6ef5lzrxw",
-      "t": "брат",
-      "label": "Брат"
     },
     {
       "a": "cmuzfpwejm8f5",
@@ -5410,6 +4864,552 @@
       "b": "cmvi66859e2wf",
       "t": "родитель",
       "label": "Отец"
+    },
+    {
+      "a": "cmvcr04hge75g",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcr3gnfk337",
+      "b": "cmvcr7heb9e3t",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrcpdms66v",
+      "b": "cmv4f11c22l10",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvcrcpdms66v",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrcpdms66v",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvcrcpdms66v",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmve9xa4qv9l1",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmvea77b8jr22",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvea77b8jr22",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmv4fp4ilorei",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveaefhildig",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveaefhildig",
+      "b": "cmvea77b8jr22",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzj50p0nkg0",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuziwaytfgbr",
+      "b": "cmveailtwr4v7",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmve9xa4qv9l1",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmvea77b8jr22",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmveailtwr4v7",
+      "b": "cmveaefhildig",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvean30r1z4w",
+      "b": "cmve9xa4qv9l1",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmveaqhyd2lxp",
+      "b": "cmvea77b8jr22",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmveawk7l7cui",
+      "b": "cmveailtwr4v7",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvfre7m7gm7w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfre7m7gm7w",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvfre7m7gm7w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfre7m7gm7w",
+      "b": "cmvcrcpdms66v",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcrfjaaxkdo",
+      "b": "cmvfroemfgzx0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvcrumwnbmtf",
+      "b": "cmvfroemfgzx0",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfroemfgzx0",
+      "b": "cmvfre7m7gm7w",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvcqnoutbkup",
+      "b": "cmvfs5j070e0w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvcr3gnfk337",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvcqrcctfk74",
+      "b": "cmvfs5j070e0w",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvcrcpdms66v",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvfs5j070e0w",
+      "b": "cmvfre7m7gm7w",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmvfsa95g2cvf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmvfsa95g2cvf",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvfsa95g2cvf",
+      "b": "cmvfs5j070e0w",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmvh95e674r9m",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmvh95e674r9m",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvh95e674r9m",
+      "b": "cmvi5960cta0v",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvh95e674r9m",
+      "b": "cmvfsa95g2cvf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmvh97xlgk1lf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmvh97xlgk1lf",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvh97xlgk1lf",
+      "b": "cmvfsa95g2cvf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvh97xlgk1lf",
+      "b": "cmvh95e674r9m",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2urgg38u9d",
+      "b": "cmvh9a1g7m564",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2vbym13mif",
+      "b": "cmvh9a1g7m564",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvh9a1g7m564",
+      "b": "cmvfsa95g2cvf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvh9a1g7m564",
+      "b": "cmvh95e674r9m",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvh9a1g7m564",
+      "b": "cmvh97xlgk1lf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvi43mlk98e1",
+      "b": "cmvi5f8zymcvc",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi4cjmkkzgj",
+      "b": "cmvi5f8zymcvc",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi5f8zymcvc",
+      "b": "cmvi5960cta0v",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzfpwejm8f5",
+      "b": "cmvi6ef5lzrxw",
+      "t": "родитель",
+      "label": "Мать"
+    },
+    {
+      "a": "cmvi5ip3i0hu7",
+      "b": "cmvi6ef5lzrxw",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi6ef5lzrxw",
+      "b": "cmvi66859e2wf",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv4dwi8flzye",
+      "b": "cmvmgmogor3g1",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmgmogor3g1",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv4dwi8flzye",
+      "b": "cmvmgqrqapda9",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmgqrqapda9",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv4dwi8flzye",
+      "b": "cmvmho9jgvhgb",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmho9jgvhgb",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvmi82uh6fvv",
+      "b": "cmv4dwi8flzye",
+      "t": "супруг",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv4fu1jphri2",
+      "b": "cmvmi82uh6fvv",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmvmivg0pzo0j",
+      "b": "cmvmho9jgvhgb",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvmiz49vzoip",
+      "b": "cmvmgqrqapda9",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvmj69vv5i7p",
+      "b": "cmva0i3m1y1ew",
+      "t": "супруг",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvmj69vv5i7p",
+      "b": "cmva1x3wc2zya",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvmj69vv5i7p",
+      "b": "cmva0zcvmrl1z",
+      "t": "супруг",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva0i3m1y1ew",
+      "b": "cmvmjjd257drt",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmva1x3wc2zya",
+      "b": "cmvmjjd257drt",
+      "t": "родитель",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva0zcvmrl1z",
+      "b": "cmvmjjd257drt",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvmj69vv5i7p",
+      "b": "cmvmjjd257drt",
+      "t": "родитель",
+      "label": "Брат"
+    },
+    {
+      "a": "cmvmjvf456xg2",
+      "b": "cmvmjjd257drt",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv5slije8jst",
+      "b": "cmw9rqpupxd8b",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmw9rqpupxd8b",
+      "b": "cmv5tqlxnogtm",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmw9rqpupxd8b",
+      "b": "cmw9ruo80zkoe",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv5tlr29k1ft",
+      "b": "cmw9rqpupxd8b",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmwcghnt4qk6e",
+      "t": "родитель",
+      "label": "Приемный отец"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmwch6nrgp076",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmwcghnt4qk6e",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmuzin7ne0b28",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmv2vlwh1a2d0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcghnt4qk6e",
+      "b": "cmv2zrw3u5am8",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwcgl7db45h2",
+      "b": "cmwch6nrgp076",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwcgbgtkipvr",
+      "b": "cmwcgl7db45h2",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwchf1jm82vj",
+      "b": "cmwcgl7db45h2",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmwcgl7db45h2",
+      "b": "cmwcghnt4qk6e",
+      "t": "супруг",
+      "label": "Муж"
     }
   ],
   "locations": [
@@ -5490,6 +5490,55 @@
         "cmvmgmogor3g1",
         "cmv2zrw3u5am8",
         "cmwcfh00mlt3p"
+      ],
+      "secret": ""
+    },
+    {
+      "id": "locmwi8njgk",
+      "name": "Дворцовый комплекс Корё Тэван",
+      "type": "other",
+      "country": "kr",
+      "parent": null,
+      "image": "",
+      "tagline": "",
+      "description": "Корейский дворцовый комплекс в столице.",
+      "tags": [],
+      "residents": [
+        "cmvcrcpdms66v",
+        "cmvcqnoutbkup",
+        "cmv4f11c22l10",
+        "cmvcr3gnfk337",
+        "cmvfroemfgzx0",
+        "cmvcqrcctfk74",
+        "cmvfs5j070e0w",
+        "cmvcr7heb9e3t",
+        "cmvcr04hge75g",
+        "cmvfre7m7gm7w",
+        "cmvfsa95g2cvf"
+      ],
+      "secret": ""
+    },
+    {
+      "id": "locmwi8saq0",
+      "name": "Замок Камелот",
+      "type": "other",
+      "country": "pt",
+      "parent": null,
+      "image": "",
+      "tagline": "",
+      "description": "Замок Камелот и обитатели его и предместий))",
+      "tags": [],
+      "residents": [
+        "cmveaqhyd2lxp",
+        "cmvea77b8jr22",
+        "cmuzj50p0nkg0",
+        "cmuziwaytfgbr",
+        "cmveailtwr4v7",
+        "cmv2v85dtrzox",
+        "cmuymve45bjgp",
+        "cmuyls26p9sy5",
+        "cmuzjcz1bk3pf",
+        "cmveawk7l7cui"
       ],
       "secret": ""
     }
