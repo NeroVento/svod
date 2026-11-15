@@ -2397,7 +2397,7 @@ function openChar(id){
   $('#modal').classList.add('on');
 }
 function closeModal(){ $('#modal').classList.remove('on'); }
-$('#modal').onclick = e => { if (e.target.id === 'modal') closeModal(); };
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape'){ closeModal(); closeForm(); }
 });
@@ -2889,7 +2889,7 @@ function openCharForm(id){
 }
 
 function closeForm(){ $('#formModal').classList.remove('on'); }
-$('#formModal').onclick = e => { if (e.target.id === 'formModal') closeForm(); };
+
 
 function confirmDeleteChar(id){
   const c = byId(id); if (!c) return;
@@ -4482,6 +4482,25 @@ document.addEventListener('click', e => {
 
   /* перерисовываем список, чтобы снять галочки и подсветку строк */
   renderLifelines();
+});
+
+/* ============================================================
+   Умное закрытие модалок
+   ============================================================ */
+let mDownTarget = null;
+
+document.addEventListener('pointerdown', e => {
+  mDownTarget = e.target;
+});
+
+document.addEventListener('pointerup', e => {
+  const modal = $('#modal');
+  if (modal && modal.classList.contains('on')) {
+    if (e.target.id === 'modal' && mDownTarget && mDownTarget.id === 'modal') {
+      closeModal();
+    }
+  }
+  mDownTarget = null;
 });
 
 /* ============================================================
