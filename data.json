@@ -838,7 +838,8 @@
       "secret": "",
       "photo": "",
       "born": 40,
-      "died": null
+      "died": null,
+      "generation": null
     },
     {
       "id": "cmv2zvr553mnb",
@@ -1641,7 +1642,7 @@
       "countries": [
         "jp"
       ],
-      "role": "Полицейский",
+      "role": "Бизнесмен",
       "status": "жив(а)",
       "tagline": "",
       "tags": [],
@@ -1714,15 +1715,15 @@
     {
       "id": "cmva0fj1slhso",
       "name": "Кагеяма Сузумэ",
-      "alias": "Сузу",
-      "gender": "м",
-      "generation": null,
-      "faction": "",
+      "alias": "Суза",
+      "gender": "ж",
+      "generation": 1,
+      "faction": "kageyama",
       "bornInto": "sawamura",
       "countries": [
         "jp"
       ],
-      "role": "",
+      "role": "Бизнес-вумен",
       "status": "жив(а)",
       "tagline": "",
       "tags": [],
@@ -3392,39 +3393,167 @@
       "photo": "",
       "born": 76,
       "died": null
+    },
+    {
+      "id": "cmwhsha50p1qd",
+      "name": "Кагеяма Тобио",
+      "alias": "Кагз",
+      "gender": "м",
+      "generation": 0,
+      "faction": "kageyama",
+      "bornInto": "kageyama",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Волейбольный псих": 10,
+        "Черничка": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 2,
+      "died": null
+    },
+    {
+      "id": "cmwhsolx0ak9p",
+      "name": "Кагеяма Шоё",
+      "alias": "Хината",
+      "gender": "м",
+      "generation": 0,
+      "faction": "kageyama",
+      "bornInto": "",
+      "countries": [
+        "jp"
+      ],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Воля": 10,
+        "Прыжок": 10,
+        "Маленький гигант": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 2,
+      "died": null
+    },
+    {
+      "id": "cmwhswm69jnmu",
+      "name": "Кагеяма Ичиро",
+      "alias": "",
+      "gender": "м",
+      "generation": 1,
+      "faction": "kageyama",
+      "bornInto": "kageyama",
+      "countries": [],
+      "role": "Волейболист",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Первый сын": 1
+      },
+      "secret": "",
+      "photo": "",
+      "born": 22,
+      "died": null
+    },
+    {
+      "id": "cmwhtblddg00c",
+      "name": "Кагеяма Джиро",
+      "alias": "",
+      "gender": "м",
+      "generation": 1,
+      "faction": "kageyama",
+      "bornInto": "kageyama",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Второй сын": 2
+      },
+      "secret": "",
+      "photo": "",
+      "born": 26,
+      "died": null
+    },
+    {
+      "id": "cmwhtd9bkopj5",
+      "name": "Кагеяма Митсуо",
+      "alias": "",
+      "gender": "м",
+      "generation": 1,
+      "faction": "kageyama",
+      "bornInto": "kageyama",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Третий сын": 3
+      },
+      "secret": "",
+      "photo": "",
+      "born": 30,
+      "died": null
+    },
+    {
+      "id": "cmwhtfqevhzrk",
+      "name": "Кагеяма Шоё-младший",
+      "alias": "",
+      "gender": "м",
+      "generation": 1,
+      "faction": "kageyama",
+      "bornInto": "kageyama",
+      "countries": [
+        "jp"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Четвертый сын": 4
+      },
+      "secret": "",
+      "photo": "",
+      "born": 34,
+      "died": null
     }
   ],
   "events": [],
   "relations": [
     {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmv2vlwh1a2d0",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmv2zzzr5x4j3",
-      "t": "родитель",
-      "label": "Мать"
-    },
-    {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmv301f1kpheg",
-      "t": "родитель",
-      "label": "Мать"
-    },
-    {
       "a": "cmv301f1kpheg",
       "b": "cmv2zzzr5x4j3",
       "t": "брат",
       "label": "Брат"
-    },
-    {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmv3039g0hxn6",
-      "t": "родитель",
-      "label": "Мать"
     },
     {
       "a": "cmv3039g0hxn6",
@@ -3447,12 +3576,6 @@
     {
       "a": "cmuzhz7a4ydpu",
       "b": "cmv2vlwh1a2d0",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmv2zrw3u5am8",
       "t": "родитель",
       "label": "Отец"
     },
@@ -3691,12 +3814,6 @@
       "label": "Муж"
     },
     {
-      "a": "cmva0fj1slhso",
-      "b": "cmva0bhiivio9",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmva0zcvmrl1z",
       "b": "cmva0p6awtyrk",
       "t": "брат",
@@ -3854,12 +3971,6 @@
     },
     {
       "a": "cmva0i3m1y1ew",
-      "b": "cmva0fj1slhso",
-      "t": "брат",
-      "label": "Сестра"
-    },
-    {
-      "a": "cmva0i3m1y1ew",
       "b": "cmva0zcvmrl1z",
       "t": "супруг",
       "label": "Муж"
@@ -3998,12 +4109,6 @@
     },
     {
       "a": "cmv2zvr553mnb",
-      "b": "cmv2zrw3u5am8",
-      "t": "супруг",
-      "label": "Жена"
-    },
-    {
-      "a": "cmv2zvr553mnb",
       "b": "cmv2zzzr5x4j3",
       "t": "родитель",
       "label": "Отец"
@@ -4019,12 +4124,6 @@
       "b": "cmv3039g0hxn6",
       "t": "родитель",
       "label": "Отец"
-    },
-    {
-      "a": "cmv2zrw3u5am8",
-      "b": "cmv2zxzs167xz",
-      "t": "родитель",
-      "label": "Мать"
     },
     {
       "a": "cmv2zxzs167xz",
@@ -4538,12 +4637,6 @@
     },
     {
       "a": "cmwcghnt4qk6e",
-      "b": "cmv2zrw3u5am8",
-      "t": "брат",
-      "label": "Сестра"
-    },
-    {
-      "a": "cmwcghnt4qk6e",
       "b": "cmwch6nrgp076",
       "t": "родитель",
       "label": "Отец"
@@ -4667,48 +4760,6 @@
       "b": "cmv4fu1jphri2",
       "t": "родитель",
       "label": "Мать"
-    },
-    {
-      "a": "cmv9zn6poh4sl",
-      "b": "cmva0bhiivio9",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zn6poh4sl",
-      "b": "cmva0fj1slhso",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zn6poh4sl",
-      "b": "cmva0i3m1y1ew",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zowjt0hno",
-      "b": "cmva0bhiivio9",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zowjt0hno",
-      "b": "cmva0fj1slhso",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zowjt0hno",
-      "b": "cmva0i3m1y1ew",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmv9zowjt0hno",
-      "b": "cmv9zn6poh4sl",
-      "t": "супруг",
-      "label": "Муж"
     },
     {
       "a": "cmv8khctemlqu",
@@ -4867,12 +4918,6 @@
       "label": "Брат"
     },
     {
-      "a": "cmuzfhizhzx89",
-      "b": "cmv2zrw3u5am8",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmuzhz7a4ydpu",
       "b": "cmuzfhizhzx89",
       "t": "родитель",
@@ -5012,12 +5057,6 @@
     },
     {
       "a": "cmuzggner81r2",
-      "b": "cmv2zrw3u5am8",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzggner81r2",
       "b": "cmuzhz7a4ydpu",
       "t": "супруг",
       "label": "Муж"
@@ -5033,42 +5072,6 @@
       "b": "cmuzfhizhzx89",
       "t": "родитель",
       "label": "Муж"
-    },
-    {
-      "a": "cmuzin7ne0b28",
-      "b": "cmv2vlwh1a2d0",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzin7ne0b28",
-      "b": "cmv2zrw3u5am8",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzhz7a4ydpu",
-      "b": "cmuzin7ne0b28",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmuzin7ne0b28",
-      "b": "cmwcghnt4qk6e",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzin7ne0b28",
-      "b": "cmuzfhizhzx89",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmuzggner81r2",
-      "b": "cmuzin7ne0b28",
-      "t": "родитель",
-      "label": "Отец"
     },
     {
       "a": "cmuziwaytfgbr",
@@ -5153,6 +5156,252 @@
       "b": "cmwcl2wp9i8j8",
       "t": "родитель",
       "label": "Отец"
+    },
+    {
+      "a": "cmwhsha50p1qd",
+      "b": "cmwhsolx0ak9p",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmva0fj1slhso",
+      "b": "cmva0bhiivio9",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmva0fj1slhso",
+      "b": "cmva0i3m1y1ew",
+      "t": "брат",
+      "label": "Сестра"
+    },
+    {
+      "a": "cmwhswm69jnmu",
+      "b": "cmva0fj1slhso",
+      "t": "супруг",
+      "label": "Жена"
+    },
+    {
+      "a": "cmwhsha50p1qd",
+      "b": "cmwhswm69jnmu",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhsolx0ak9p",
+      "b": "cmwhswm69jnmu",
+      "t": "родитель",
+      "label": ""
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0bhiivio9",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv9zn6poh4sl",
+      "b": "cmva0fj1slhso",
+      "t": "родитель",
+      "label": "Дочь"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0bhiivio9",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0i3m1y1ew",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmva0fj1slhso",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv9zowjt0hno",
+      "b": "cmv9zn6poh4sl",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmuzin7ne0b28",
+      "b": "cmv2vlwh1a2d0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmuzin7ne0b28",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmuzin7ne0b28",
+      "b": "cmwcghnt4qk6e",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzin7ne0b28",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmuzin7ne0b28",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2vlwh1a2d0",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2zzzr5x4j3",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv301f1kpheg",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv3039g0hxn6",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmuzhz7a4ydpu",
+      "b": "cmv2zrw3u5am8",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2zvr553mnb",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmv2zxzs167xz",
+      "t": "родитель",
+      "label": "Сын"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmwcghnt4qk6e",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmuzfhizhzx89",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmuzggner81r2",
+      "b": "cmv2zrw3u5am8",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmv2zrw3u5am8",
+      "b": "cmuzin7ne0b28",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhsha50p1qd",
+      "b": "cmwhtblddg00c",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhsolx0ak9p",
+      "b": "cmwhtblddg00c",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhtblddg00c",
+      "b": "cmwhswm69jnmu",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhsha50p1qd",
+      "b": "cmwhtd9bkopj5",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhsolx0ak9p",
+      "b": "cmwhtd9bkopj5",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhtd9bkopj5",
+      "b": "cmwhswm69jnmu",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhtd9bkopj5",
+      "b": "cmwhtblddg00c",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhsha50p1qd",
+      "b": "cmwhtfqevhzrk",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhsolx0ak9p",
+      "b": "cmwhtfqevhzrk",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwhtfqevhzrk",
+      "b": "cmwhswm69jnmu",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhtfqevhzrk",
+      "b": "cmwhtblddg00c",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwhtfqevhzrk",
+      "b": "cmwhtd9bkopj5",
+      "t": "брат",
+      "label": "Брат"
     }
   ],
   "locations": [
