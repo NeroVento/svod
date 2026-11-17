@@ -3565,7 +3565,7 @@
       "alias": "Айни",
       "gender": "м",
       "generation": 2,
-      "faction": "",
+      "faction": "keil",
       "bornInto": "",
       "countries": [
         "jp",
@@ -3594,8 +3594,8 @@
       "alias": "Ричунчик, Рич",
       "gender": "м",
       "generation": 2,
-      "faction": "",
-      "bornInto": "",
+      "faction": "keil",
+      "bornInto": "keil",
       "countries": [
         "gb"
       ],
@@ -3623,7 +3623,7 @@
       "gender": "м",
       "generation": 2,
       "faction": "",
-      "bornInto": "",
+      "bornInto": "keil",
       "countries": [
         "gb"
       ],
@@ -3673,8 +3673,8 @@
       "alias": "Аль",
       "gender": "м",
       "generation": 3,
-      "faction": "",
-      "bornInto": "",
+      "faction": "keil",
+      "bornInto": "keil",
       "countries": [
         "gb"
       ],
@@ -3697,12 +3697,12 @@
     },
     {
       "id": "cmwl3phvzthf3",
-      "name": "Кэйл Райни",
+      "name": "Ушиджима Райни",
       "alias": "Райни",
       "gender": "м",
       "generation": 3,
-      "faction": "",
-      "bornInto": "",
+      "faction": "ushijima",
+      "bornInto": "keil",
       "countries": [
         "gb"
       ],
@@ -3714,6 +3714,35 @@
       "quote": "",
       "traits": {
         "Балеватость": 7
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
+      "died": null
+    },
+    {
+      "id": "cmwl42xdd02kl",
+      "name": "Кэйл Кавех",
+      "alias": "Кави, Камисэ",
+      "gender": "м",
+      "generation": 3,
+      "faction": "keil",
+      "bornInto": "ushijima",
+      "countries": [
+        "jp",
+        "gb"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Элегантность": 10,
+        "Бесявость Аля": 10,
+        "Заколочки": 6,
+        "Нежни": 10
       },
       "secret": "",
       "photo": "",
@@ -5572,42 +5601,6 @@
       "label": "Брат"
     },
     {
-      "a": "cmwl33badbq2m",
-      "b": "cmwl0rhvydm4e",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
-      "a": "cmwl36t9b9gx3",
-      "b": "cmwl33badbq2m",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmwl0rhvydm4e",
-      "b": "cmwl3i3b8tm8h",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmwl33badbq2m",
-      "b": "cmwl3i3b8tm8h",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmwl39etrqh40",
-      "b": "cmwl33badbq2m",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
-      "a": "cmwl39etrqh40",
-      "b": "cmwl36t9b9gx3",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmwl39etrqh40",
       "b": "cmvi6ef5lzrxw",
       "t": "супруг",
@@ -5621,7 +5614,49 @@
     },
     {
       "a": "cmwl33badbq2m",
+      "b": "cmwl39etrqh40",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl36t9b9gx3",
+      "b": "cmwl39etrqh40",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl36t9b9gx3",
+      "b": "cmwl33badbq2m",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl33badbq2m",
+      "b": "cmwl3i3b8tm8h",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl33badbq2m",
       "b": "cmwl3phvzthf3",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl3phvzthf3",
+      "b": "cmwl3i3b8tm8h",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl0rhvydm4e",
+      "b": "cmwl33badbq2m",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmwl0rhvydm4e",
+      "b": "cmwl3i3b8tm8h",
       "t": "родитель",
       "label": "Отец"
     },
@@ -5632,10 +5667,16 @@
       "label": "Отец"
     },
     {
-      "a": "cmwl3phvzthf3",
+      "a": "cmwcfh00mlt3p",
+      "b": "cmwl42xdd02kl",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl42xdd02kl",
       "b": "cmwl3i3b8tm8h",
-      "t": "брат",
-      "label": "Брат"
+      "t": "супруг",
+      "label": "Муж"
     }
   ],
   "locations": [
