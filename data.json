@@ -182,7 +182,12 @@
     {
       "id": "keil-kamelot",
       "name": "Кэйл-Камелоты",
-      "color": "#BC8F8F"
+      "color": "#2E8B57"
+    },
+    {
+      "id": "keil",
+      "name": "Кэйлы",
+      "color": "#00FF7F"
     }
   ],
   "characters": [
@@ -2687,7 +2692,7 @@
     {
       "id": "cmvi66859e2wf",
       "name": "Мадарамэ Айга",
-      "alias": "Кошка",
+      "alias": "Кошка, Лап",
       "gender": "м",
       "generation": 2,
       "faction": "madarame",
@@ -2974,7 +2979,7 @@
       "traits": {
         "Мозги на асфальте": 10,
         "Размах": 10,
-        "Иммунитет к фиалкам": 10
+        "Иммунитет к фиалкам": 0
       },
       "secret": "",
       "photo": "",
@@ -3552,6 +3557,167 @@
       "secret": "",
       "photo": "",
       "born": 34,
+      "died": null
+    },
+    {
+      "id": "cmwl0rhvydm4e",
+      "name": "Кэйл Райан",
+      "alias": "Айни",
+      "gender": "м",
+      "generation": 2,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "jp",
+        "gb"
+      ],
+      "role": "Писатель, модель",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Орливость": 10,
+        "Фэшн": 10,
+        "Катешки (катушки)": 1,
+        "Прекрасие": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 39,
+      "died": null
+    },
+    {
+      "id": "cmwl33badbq2m",
+      "name": "Кэйл Ричард",
+      "alias": "Ричунчик, Рич",
+      "gender": "м",
+      "generation": 2,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "gb"
+      ],
+      "role": "Хозяин издательства",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Гордость": 8,
+        "Спесь": 6,
+        "Любовь к чтению": 10,
+        "Терки с братом": 10
+      },
+      "secret": "",
+      "photo": "",
+      "born": 41,
+      "died": null
+    },
+    {
+      "id": "cmwl36t9b9gx3",
+      "name": "Кэйл Оливер",
+      "alias": "Олли",
+      "gender": "м",
+      "generation": 2,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "gb"
+      ],
+      "role": "Ученый-биотехнолог",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {},
+      "secret": "",
+      "photo": "",
+      "born": 45,
+      "died": null
+    },
+    {
+      "id": "cmwl39etrqh40",
+      "name": "Кэйл-Камелот Джеймс",
+      "alias": "Джейми",
+      "gender": "м",
+      "generation": 2,
+      "faction": "keil-kamelot",
+      "bornInto": "",
+      "countries": [
+        "gb"
+      ],
+      "role": "Актёр",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Жизнерадостность": 8,
+        "Тёрки с семьёй": 10,
+        "Мистер Шмонд": 10,
+        "Иммунитет к прекрасным принцам": 0
+      },
+      "secret": "",
+      "photo": "",
+      "born": 39,
+      "died": null
+    },
+    {
+      "id": "cmwl3i3b8tm8h",
+      "name": "Кэйл Александр",
+      "alias": "Аль",
+      "gender": "м",
+      "generation": 3,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "gb"
+      ],
+      "role": "Певец, модель, писатель",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Гордость": 10,
+        "Спесь": 8,
+        "Иммунитет к засорению ментального пространства Камисэ": 0,
+        "Способность к запоминанию имен": 2
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
+      "died": null
+    },
+    {
+      "id": "cmwl3phvzthf3",
+      "name": "Кэйл Райни",
+      "alias": "Райни",
+      "gender": "м",
+      "generation": 3,
+      "faction": "",
+      "bornInto": "",
+      "countries": [
+        "gb"
+      ],
+      "role": "",
+      "status": "жив(а)",
+      "tagline": "",
+      "tags": [],
+      "bio": "",
+      "quote": "",
+      "traits": {
+        "Балеватость": 7
+      },
+      "secret": "",
+      "photo": "",
+      "born": null,
       "died": null
     }
   ],
@@ -4848,24 +5014,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmuzfpwejm8f5",
-      "b": "cmvi66859e2wf",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvi66859e2wf",
-      "b": "cmva1x3wc2zya",
-      "t": "супруг",
-      "label": "Отец"
-    },
-    {
-      "a": "cmvi5ip3i0hu7",
-      "b": "cmvi66859e2wf",
-      "t": "родитель",
-      "label": "Отец"
-    },
-    {
       "a": "cmvcr04hge75g",
       "b": "cmvcr7heb9e3t",
       "t": "родитель",
@@ -5208,12 +5356,6 @@
       "label": "Отец"
     },
     {
-      "a": "cmvi6ef5lzrxw",
-      "b": "cmvi66859e2wf",
-      "t": "брат",
-      "label": "Брат"
-    },
-    {
       "a": "cmv4dwi8flzye",
       "b": "cmvmgmogor3g1",
       "t": "родитель",
@@ -5316,12 +5458,6 @@
       "label": "Брат"
     },
     {
-      "a": "cmvmjvf456xg2",
-      "b": "cmvmjjd257drt",
-      "t": "супруг",
-      "label": "Муж"
-    },
-    {
       "a": "cmv5slije8jst",
       "b": "cmw9rqpupxd8b",
       "t": "родитель",
@@ -5410,6 +5546,96 @@
       "b": "cmwcghnt4qk6e",
       "t": "супруг",
       "label": "Муж"
+    },
+    {
+      "a": "cmuzfpwejm8f5",
+      "b": "cmvi66859e2wf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi66859e2wf",
+      "b": "cmva1x3wc2zya",
+      "t": "супруг",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi5ip3i0hu7",
+      "b": "cmvi66859e2wf",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmvi66859e2wf",
+      "b": "cmvi6ef5lzrxw",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl33badbq2m",
+      "b": "cmwl0rhvydm4e",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmwl36t9b9gx3",
+      "b": "cmwl33badbq2m",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl0rhvydm4e",
+      "b": "cmwl3i3b8tm8h",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl33badbq2m",
+      "b": "cmwl3i3b8tm8h",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl39etrqh40",
+      "b": "cmwl33badbq2m",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl39etrqh40",
+      "b": "cmwl36t9b9gx3",
+      "t": "брат",
+      "label": "Брат"
+    },
+    {
+      "a": "cmwl39etrqh40",
+      "b": "cmvi6ef5lzrxw",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmvmjvf456xg2",
+      "b": "cmvmjjd257drt",
+      "t": "супруг",
+      "label": "Муж"
+    },
+    {
+      "a": "cmwl33badbq2m",
+      "b": "cmwl3phvzthf3",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl0rhvydm4e",
+      "b": "cmwl3phvzthf3",
+      "t": "родитель",
+      "label": "Отец"
+    },
+    {
+      "a": "cmwl3phvzthf3",
+      "b": "cmwl3i3b8tm8h",
+      "t": "брат",
+      "label": "Брат"
     }
   ],
   "locations": [
